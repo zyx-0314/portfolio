@@ -49,7 +49,7 @@ The project goal is to create a portfolio to showcase the project that I have do
 
 ### Built With 🛠️
 
-[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url]
+[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url] [![Emotion][Emotion.com]][Emotion-url] [![FramerMotion][FramerMotion.com]][FramerMotion-url]
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
@@ -125,6 +125,10 @@ Future Plans.
 [Bootstrap-url]: https://getbootstrap.com
 [Stylus.com]: https://img.shields.io/badge/Stylus-333333?style=for-the-badge&logo=stylus&logoColor=white
 [Stylus-url]: https://stylus-lang.com
+[Emotion.com]: https://img.shields.io/badge/Emotion-DB7093?style=for-the-badge&logo=styled-components&logoColor=white
+[Emotion-url]: https://emotion.sh
+[FramerMotion.com]: https://img.shields.io/badge/Framer_Motion-000000?style=for-the-badge&logo=framer&logoColor=white
+[FramerMotion-url]: https://www.framer.com/motion/
 
 [TensorFlow.com]: https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white
 [TensorFlow-url]: https://www.tensorflow.org
