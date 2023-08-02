@@ -4,7 +4,7 @@ import { ContentBody } from '@/components/paragraph/style'
 import { GridDisplay } from '@/components/grid'
 import { SectionHeader } from '@/components/sectionHeader'
 
-export function AboutSection ( props: any )
+export function AboutSection ( { id }: any )
 {
   const listTechs = [
     'BootStrap',
@@ -38,7 +38,7 @@ export function AboutSection ( props: any )
   ]
 
   return (
-    <AboutContainer className='w-2/3'>
+    <AboutContainer id={ id }>
       <SectionHeader number='.01' title='About Me' />
       <div>
         <ContentBody>

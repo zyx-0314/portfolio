@@ -8,7 +8,7 @@ export const HeaderStyles = styled.header`
 	max-height: 5vh;
 `;
 
-export const ButtonGroupStyles = styled.div`
+export const ButtonGroupStyles = styled.nav`
 	display: flex;
 	gap: 15px;
 

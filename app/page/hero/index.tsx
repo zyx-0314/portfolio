@@ -4,10 +4,10 @@ import { Headers, HeroContainer, HeroTextContent } from './style'
 import { StyledButton } from '@/components/buttons'
 import { ContentBody } from '@/components/paragraph/style'
 
-export default function HeroSection ( props: any )
+export default function HeroSection ( { id }: any )
 {
   return (
-    <HeroContainer>
+    <HeroContainer id={ id }>
       <HeroTextContent>
         <Headers>
           <h1>Ian Cedric Ramirez</h1>

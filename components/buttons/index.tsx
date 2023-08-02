@@ -22,7 +22,7 @@ export function StyledButton (
   {
     case 'link':
       return <LinedButton className={ className } >
-        <Link href={ href ? href : '/construction' }>{ text }</Link>
+        <a href={ href ? href : '/construction' }>{ text }</a>
         <hr />
       </LinedButton>
 
