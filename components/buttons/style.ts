@@ -1,4 +1,4 @@
-import { colors } from './../variables';
+import { colors } from '../variables';
 import styled from '@emotion/styled';
 
 export const LinedButton = styled.div`
