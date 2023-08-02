@@ -18,7 +18,7 @@ export function HeaderNavigation ()
     <HeaderStyles>
       <LogoStyles>
         <Link href="/">
-          <Image alt='Nyebe Logo' src={ '/images/nyebe_white_cutout.png' } width={ 50 } height={ 0 } />
+          <Image alt='Nyebe Logo' src={ '/static/images/nyebe_white_cutout.png' } width={ 50 } height={ 0 } />
         </Link>
       </LogoStyles>
       <ButtonGroupStyles>
