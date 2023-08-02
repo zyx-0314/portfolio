@@ -31,16 +31,16 @@ export const LinedButton = styled.div`
 
 export const PopButton = styled.div`
 	font-size: 0.8rem;
-	padding: 10px 15px;
+	padding: 8px 15px;
 	cursor: pointer;
 	border: 1px solid ${colors.primary};
 	background-color: transparent;
-	border-radius: 5px;
-	color: #fff;
+	border-radius: 4px;
 	transition: all ease-in-out 0.1s;
 
 	&:hover {
-		transform: translate(-3px, -3px);
-		box-shadow: 3px 3px ${colors.primary};
+		color: ${colors.primary};
+		transform: translate(-4px, -4px);
+		box-shadow: 4px 4px ${colors.primary};
 	}
 `;

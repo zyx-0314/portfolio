@@ -18,7 +18,7 @@ export const LogoStyles = styled.div`
 
 	&:hover {
 		animation: pulse 1s infinite;
-		transition: 0.3s;
+		transition: 0.5s;
 	}
 	@keyframes pulse {
 		from {
