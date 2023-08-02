@@ -8,12 +8,7 @@ export function Floaters ()
 {
   return (
     <div className='w-full'>
-      <FloaterBorder direction='right' className='px-10 w-full'>
-        <div className='alignment'>
-          <a href='mailto:ramirezian037@gmail.com'>ramirezian037@gmail.com</a>
-        </div>
-      </FloaterBorder>
-      <FloaterBorder direction='left' className='px-10 w-full'>
+      <FloaterBorder className='px-10 w-full'>
         <div className='alignment'>
           <PopupIcon href="https://github.com/zyx-0314">
             <VscGithub style={ { fontSize: 25, } } />
@@ -25,7 +20,11 @@ export function Floaters ()
             <FiMail style={ { fontSize: 25 } } />
           </PopupIcon>
         </div>
+        <div className='alignment'>
+          <a href='mailto:ramirezian037@gmail.com'>ramirezian037@gmail.com</a>
+        </div>
       </FloaterBorder>
+
     </div>
   )
 }

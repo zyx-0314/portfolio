@@ -1,12 +1,13 @@
 import { Profile } from '@/components/profile/index'
 import React from 'react'
-import { ContentBody, Headers, HeroContainer, HeroTextContent } from './style'
+import { Headers, HeroContainer, HeroTextContent } from './style'
 import { StyledButton } from '@/components/buttons'
+import { ContentBody } from '@/components/paragraph/style'
 
-export default function HeroSection ()
+export default function HeroSection ( props: any )
 {
   return (
-    <HeroContainer className='w-2/3'>
+    <HeroContainer>
       <HeroTextContent>
         <Headers>
           <h1>Ian Cedric Ramirez</h1>

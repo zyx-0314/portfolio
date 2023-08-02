@@ -1,17 +1,4 @@
-import { colors } from './../../../components/variables';
 import styled from '@emotion/styled';
-
-export const ContentBody = styled.div`
-	span {
-		color: ${colors.primary};
-		border-bottom: 2px solid transparent;
-		transition: all 0.2s ease-in-out;
-
-		&:hover {
-			border-bottom: 2px solid ${colors.primary};
-		}
-	}
-`;
 
 export const Headers = styled.div`
 	align-items: flex-start;
@@ -23,33 +10,66 @@ export const Headers = styled.div`
 	position: relative;
 
 	h1 {
-		font-size: 65px;
+		font-size: 4rem;
 		font-weight: 700;
 		line-height: normal;
-		margin-top: -1px;
 		position: relative;
-		text-align: center;
 		width: fit-content;
 	}
 
 	h2 {
-		font-size: 48px;
+		font-size: 3rem;
 		font-weight: 700;
 		line-height: normal;
 		opacity: 0.6;
 		position: relative;
-		width: 808px;
+		width: 75%;
+	}
+
+	@media (max-width: 1480px) {
+		h1 {
+			font-size: 3.2rem;
+		}
+
+		h2 {
+			font-size: 2.2rem;
+			width: 75%;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		h1 {
+			font-size: 3rem;
+		}
+
+		h2 {
+			font-size: 2rem;
+			width: 75%;
+		}
 	}
 `;
 
 export const HeroTextContent = styled.div`
 	align-items: flex-start;
 	display: grid;
-	gap: 2rem;
+	gap: 3rem;
 `;
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.section`
 	align-items: center;
 	display: inline-flex;
-	gap: 1rem;
+	gap: 2rem;
+	height: 95vh;
+	width: 75%;
+
+	@media (max-width: 1480px) {
+		height: fit-content;
+		width: 90%;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
