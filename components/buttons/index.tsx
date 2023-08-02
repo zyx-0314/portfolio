@@ -49,5 +49,5 @@ export function StyledButton (
 
 
 
-  return <p>This are the possible options 'button-link' | 'button-action' | 'submit' | 'reset' | 'link' | 'download'</p>
+  return <p>This are the possible options &apos;button-link&apos; | &apos;button-action&apos; | &apos;submit&apos; | &apos;reset&apos; | &apos;link&apos; | &apos;download&apos;</p>
 }
