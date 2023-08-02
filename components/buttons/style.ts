@@ -36,6 +36,7 @@ export const PopButton = styled.div`
 	border: 1px solid ${colors.primary};
 	background-color: transparent;
 	border-radius: 4px;
+	width: fit-content;
 	transition: all ease-in-out 0.1s;
 
 	&:hover {

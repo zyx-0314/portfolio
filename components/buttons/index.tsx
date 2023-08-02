@@ -40,9 +40,14 @@ export function StyledButton (
 
       return <PopButton className={ className } onClick={ handleDownload }> { text } </PopButton>
 
+    case 'button-link':
+      return <PopButton className={ className } onClick={ onClick }>
+        <Link href={ href ? href : '/construction' }>{ text }</Link>
+      </PopButton>
+
   }
 
 
 
-  return <p>This are the possible options 'button' | 'submit' | 'reset' | 'link' | 'download'</p>
+  return <p>This are the possible options 'button-link' | 'button-action' | 'submit' | 'reset' | 'link' | 'download'</p>
 }
