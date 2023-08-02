@@ -5,11 +5,16 @@ export const HeaderStyles = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	padding: 5px;
+	max-height: 5vh;
 `;
 
 export const ButtonGroupStyles = styled.div`
 	display: flex;
 	gap: 15px;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export const LogoStyles = styled.div`

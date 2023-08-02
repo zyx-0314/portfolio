@@ -30,6 +30,7 @@ export const LinedButton = styled.div`
 `;
 
 export const PopButton = styled.div`
+	z-index: 10;
 	font-size: 0.8rem;
 	padding: 8px 15px;
 	cursor: pointer;
@@ -43,5 +44,9 @@ export const PopButton = styled.div`
 		color: ${colors.primary};
 		transform: translate(-4px, -4px);
 		box-shadow: 4px 4px ${colors.primary};
+	}
+
+	@media (max-width: 768px) {
+		color: ${colors.primary};
 	}
 `;

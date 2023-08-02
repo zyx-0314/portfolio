@@ -1,18 +1,12 @@
 import styled from '@emotion/styled';
 import { colors } from '../variables';
 
-interface FloaterProps {
-	direction: string;
-}
-
-export const FloaterBorder = styled.div<FloaterProps>`
+export const FloaterBorder = styled.div`
 	position: fixed;
 	bottom: 0;
 	display: flex;
-	${(props) =>
-		props.direction === 'left'
-			? 'justify-content: flex-start;'
-			: 'justify-content: flex-end;'}
+	justify-content: space-between;
+	align-items: end;
 
 	.alignment {
 		display: flex;
@@ -41,6 +35,10 @@ export const FloaterBorder = styled.div<FloaterProps>`
 			border-radius: 100%;
 			height: 100px;
 			background-color: ${colors.primary};
+		}
+
+		@media (max-width: 768px) {
+			display: none;
 		}
 	}
 `;

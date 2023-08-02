@@ -14,7 +14,7 @@ export function Profile ()
           <div className="rectangle-4" />
           <div className="cover" />
           <div className="image">
-            <Image src='/images/Profile.jpg' alt='Ian Cedric Ramirez' fill />
+            <Image src='/images/Profile.jpg' alt='Ian Cedric Ramirez' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           </div>
         </div>
       </div>
