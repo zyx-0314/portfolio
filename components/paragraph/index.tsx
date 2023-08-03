@@ -3,12 +3,13 @@ import { ContentBody } from './style'
 
 interface Props
 {
-  child: React.ReactNode
+  children: React.ReactNode
+  textAlignment?: 'left' | 'center' | 'right'
 }
 
-export function StyledParagraph ( { child }: Props )
+export function StyledParagraph ( { children, textAlignment }: Props )
 {
   return (
-    <ContentBody>{ child }</ContentBody>
+    <ContentBody textAlignment={ textAlignment ? textAlignment : 'justify' }>{ children }</ContentBody>
   )
 }
