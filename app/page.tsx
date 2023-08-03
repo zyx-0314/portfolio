@@ -6,6 +6,7 @@ import { AboutSection } from './page/about'
 import { ContactSection } from './page/contact'
 import { ExperienceSection } from './page/experience'
 import { ProjectsSection } from './page/projects'
+import { StyledContainer } from '@/components/container'
 
 export default function Home ()
 {
@@ -14,15 +15,15 @@ export default function Home ()
   return (
     <>
       <Floaters />
-      <div className='px-10 pt-5'>
-        <HeaderNavigation />
-        <main className="flex min-h-screen flex-col items-center justify-between px-24">
+      <HeaderNavigation />
+      <div className='px-10'>
+        <StyledContainer specialType='Main' className="items-center">
           <HeroSection id='hero' />
           <AboutSection id='about' />
           <ExperienceSection id='experience' />
           <ProjectsSection id='projects' />
           <ContactSection id='contact' />
-        </main>
+        </StyledContainer>
         <footer className='flex w-full justify-center pt-5 mt-5 text-xs'>Nyebe Creations - { date.getFullYear() } - v.0.1.2</footer>
       </div>
     </>
