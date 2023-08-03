@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 import { colors } from '../variables';
 
-export const ContentBody = styled.p`
-	text-align: justify;
+interface ParagraphContainerProps {
+	readonly textAlignment: 'left' | 'center' | 'right' | 'justify';
+}
+
+export const ContentBody = styled.p<ParagraphContainerProps>`
+	text-align: ${(props) => props.textAlignment};
 	text-justify: inter-word;
 	z-index: 10;
 
