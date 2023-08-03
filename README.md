@@ -45,6 +45,10 @@
 
 The project goal is to create a portfolio to showcase the project that I have done, my experiences and skills. The project is also a way to learn new technologies and improve my skills.
 
+You can check the UI/UX Design in [Figma](https://www.figma.com/community/file/1268740358486001871/Portfolio-Project).
+
+[![Figma][Figma.com]][Figma.url]
+
 <br/>
 
 ### Built With 🛠️
@@ -238,3 +242,6 @@ Future Plans.
 [Ruby.url]: https://www.ruby-lang.org/en/
 [Rust.com]: https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white
 [Rust.url]: https://www.rust-lang.org
+
+[Figma.com]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
+[Figma.url]: https://www.figma.com

@@ -12,9 +12,10 @@ export function GridDisplay ( { list }: GridProps )
     <GridContainerStyle>
       { list.map( ( word, index ) => (
         <WordItemStyle key={ index } className='grid-item'>
-          <p>
-            <span>&gt; </span>{ word }
-          </p>
+          <div className='flex gap-x-1'>
+            <span>&gt;</span>
+            <p> { word } </p>
+          </div>
         </WordItemStyle>
       ) ) }
     </GridContainerStyle>

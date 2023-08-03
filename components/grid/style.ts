@@ -10,7 +10,6 @@ export const GridContainerStyle = styled.div`
 export const WordItemStyle = styled.div`
 	span {
 		color: ${colors.primary};
-		border-bottom: 3px solid black;
 	}
 
 	p {
@@ -21,6 +20,9 @@ export const WordItemStyle = styled.div`
 		&:hover {
 			color: ${colors.primary};
 			border-bottom: 2px solid ${colors.primary};
+			span {
+				border-bottom: 2px solid transparent;
+			}
 		}
 	}
 `;
