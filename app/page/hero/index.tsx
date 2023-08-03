@@ -8,7 +8,7 @@ import { StyledContainer } from '@/components/container'
 export default function HeroSection ( { id }: { id: string } )
 {
   return (
-    <StyledContainer id={ id } hero >
+    <StyledContainer id={ id } specialType='Hero' className='pt-5 mt-5'>
       <HeroTextContent>
         <Headers>
           <h1>Ian Cedric Ramirez</h1>

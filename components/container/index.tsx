@@ -1,25 +1,34 @@
 import React from 'react'
-import { HeroStyledSectionContainer, StyledSectionContainer } from './style'
+import { HeroStyledSectionContainer, StyledMainContainer, StyledSectionContainer } from './style'
 
 interface ContainerProps
 {
-  id: string
   children: React.ReactNode
-  hero?: boolean
+  id?: string
+  className?: string
+  specialType?: 'Hero' | 'Main'
 }
 
-export function StyledContainer ( { id, children, hero }: ContainerProps )
+export function StyledContainer ( { id, children, specialType, className }: ContainerProps )
 {
-  if ( hero )
+
+  switch ( specialType )
   {
-    return (
-      <HeroStyledSectionContainer id={ id } >
-        { children }
-      </HeroStyledSectionContainer>
-    )
+    case 'Main':
+      return (
+        <StyledMainContainer id={ id } className={ className }>
+          { children }
+        </StyledMainContainer>
+      )
+    case 'Hero':
+      return (
+        <HeroStyledSectionContainer id={ id } className={ className }>
+          { children }
+        </HeroStyledSectionContainer>
+      )
   }
   return (
-    <StyledSectionContainer id={ id } >
+    <StyledSectionContainer id={ id } className={ className }>
       { children }
     </StyledSectionContainer>
   )

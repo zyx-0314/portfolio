@@ -28,10 +28,6 @@ export const ContactSubHeader = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		p {
-			width: 1000%;
-		}
-
 		h1 {
 			font-size: 1.6rem;
 			font-weight: 500;
