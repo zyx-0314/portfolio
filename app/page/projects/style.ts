@@ -65,6 +65,32 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 			);
 		}
 	}
+
+	@media (max-width: 1024px) {
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		#number {
+			opacity: 1;
+			font-size: 5rem;
+			bottom: 2rem;
+		}
+
+		#content {
+			top: 0;
+		}
+
+		#hidden {
+			opacity: 1;
+		}
+
+		&:hover {
+			#number {
+				bottom: 2rem;
+			}
+		}
+	}
 `;
 
 export const Cover = styled.div`
@@ -90,6 +116,16 @@ export const ProjectContent = styled.div`
 	height: 100%;
 	gap: 1rem;
 	justify-content: flex-end;
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 1024px) {
+		p {
+			font-size: 0.8rem;
+		}
+	}
 `;
 
 export const ContentHead = styled.div`
@@ -107,6 +143,28 @@ export const ContentHead = styled.div`
 		letter-spacing: 3px;
 		font-size: 1rem;
 		text-transform: uppercase;
+	}
+
+	@media (max-width: 1024px) {
+		h1 {
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+
+		h2 {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+
+		h2 {
+			font-size: 0.6rem;
+		}
 	}
 `;
 
