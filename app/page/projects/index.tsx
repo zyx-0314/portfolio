@@ -34,7 +34,7 @@ export function ProjectsSection ( { id }: { id: string } )
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } >
+        <ProjectContainer value={ index } key={ index } >
           <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
             <Cover id='cover'>
               <ProjectNumber id='number'>{ index < 10 ? `0${ index + 1 }` : index + 1 }</ProjectNumber>
