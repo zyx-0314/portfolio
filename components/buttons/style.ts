@@ -1,12 +1,28 @@
+import { DesignControl } from './index';
 import { colors } from '../variables';
 import styled from '@emotion/styled';
 
-export const LinedButton = styled.div`
-	font-size: 0.8rem;
-	padding: 10px 15px;
+interface Props {
+	designControl?: DesignControl;
+}
+
+export const LinedButton = styled.div<Props>`
+	${(props) =>
+		props.designControl?.fontSize
+			? `font-size: ${props.designControl.fontSize};`
+			: 'font-size: 0.8rem;'}
+	${(props) =>
+		props.designControl?.paddingXY
+			? `padding: ${props.designControl.paddingXY};`
+			: 'padding: 10px 15px;'}
+	${(props) =>
+		props.designControl?.width
+			? `width: ${props.designControl.width};`
+			: 'width: fit-content;'}
 	position: relative;
 	overflow: hidden;
 	transition: all 0.2s ease-in-out;
+	text-align: center;
 
 	hr {
 		border: none;
@@ -19,7 +35,7 @@ export const LinedButton = styled.div`
 	}
 
 	&:hover {
-		cursor: pointer;
+		/* cursor: pointer; */
 		color: ${colors.primary};
 
 		hr {
@@ -29,15 +45,24 @@ export const LinedButton = styled.div`
 	}
 `;
 
-export const PopButton = styled.div`
-	z-index: 10;
-	font-size: 0.8rem;
-	padding: 8px 15px;
+export const PopButton = styled.div<Props>`
+	${(props) =>
+		props.designControl?.fontSize
+			? `font-size: ${props.designControl.fontSize};`
+			: 'font-size: 0.8rem;'}
+	${(props) =>
+		props.designControl?.paddingXY
+			? `padding: ${props.designControl.paddingXY};`
+			: 'padding: 10px 15px;'}
+	${(props) =>
+		props.designControl?.width
+			? `width: ${props.designControl.width};`
+			: 'width: fit-content;'}
 	cursor: pointer;
 	border: 1px solid ${colors.primary};
 	background-color: transparent;
 	border-radius: 4px;
-	width: fit-content;
+	text-align: center;
 	transition: all ease-in-out 0.1s;
 
 	&:hover {

@@ -24,6 +24,7 @@ export const HeroStyledSectionContainer = styled.section`
 	gap: 2rem;
 	height: 95vh;
 	width: 75%;
+	z-index: 10;
 
 	@media (max-width: 1480px) {
 		height: fit-content;

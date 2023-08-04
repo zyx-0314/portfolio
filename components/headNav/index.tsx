@@ -10,11 +10,11 @@ import { CiMenuKebab } from "react-icons/ci";
 export function HeaderNavigation ()
 {
   const buttonList: ButtonProps[] = [
-    { text: 'About', href: '#about', type: 'link' },
-    { text: 'Experience', href: '#experience', type: 'link' },
-    { text: 'Projects', href: '#projects', type: 'link' },
-    { text: 'Contact', href: '#contact', type: 'link' },
-    { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'download' }
+    { text: 'About', href: '#about', type: 'Link', design: 'Lined' },
+    { text: 'Experience', href: '#experience', type: 'Link', design: 'Lined' },
+    { text: 'Projects', href: '#projects', type: 'Link', design: 'Lined' },
+    { text: 'Contact', href: '#contact', type: 'Link', design: 'Lined' },
+    { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'Download', design: 'PopUp' }
   ]
   const [ isMenuOpen, setIsMenuOpen ] = useState( false );
   const controls = useAnimation();
