@@ -4,12 +4,20 @@ import styled from '@emotion/styled';
 export const ExperienceContentContainer = styled.div`
 	display: flex;
 	flex-direction: row;
-	column-gap: 1.5rem;
+	gap: 1.5rem;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 export const ExperienceListContainer = styled.div`
 	border-right: 3px solid ${colors.primary};
 	width: fit-content;
+
+	@media (max-width: 768px) {
+		border-right: none;
+	}
 `;
 
 export const StyledUnorderList = styled.ul`
@@ -17,10 +25,18 @@ export const StyledUnorderList = styled.ul`
 	flex-direction: column;
 	row-gap: 0.8rem;
 	padding: 0 1rem;
+
+	@media (max-width: 768px) {
+		padding: 0;
+	}
 `;
 
 export const ShowCardContainer = styled.div`
 	width: 75%;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 export const StyledShowCard = styled.div`
@@ -42,6 +58,7 @@ export const StyledShowCardHeader = styled.div`
 	display: flex;
 	flex-direction: row;
 	column-gap: 1rem;
+	align-items: center;
 `;
 
 export const StyledShowCardLogo = styled.div`
@@ -61,6 +78,16 @@ export const ShowCardHeaderContent = styled.div`
 
 	div {
 		width: fit-content;
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 1rem;
+		}
+
+		h2 {
+			font-size: 0.8rem;
+		}
 	}
 `;
 
