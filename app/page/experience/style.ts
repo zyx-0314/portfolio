@@ -28,13 +28,13 @@ export const StyledShowCard = styled.div`
 	flex-direction: column;
 	gap: 1rem;
 	padding: 1rem;
-	border: 2px solid ${colors.white};
+	border: 2px solid ${colors.primary};
 	border-radius: 5px;
 	transition: all ease-in-out 0.15s;
 
 	&:hover {
 		transform: translate(-6px, -6px);
-		box-shadow: 6px 6px ${colors.white};
+		box-shadow: 6px 6px ${colors.primary};
 	}
 `;
 
@@ -50,6 +50,7 @@ export const StyledShowCardLogo = styled.div`
 
 export const ShowCardHeaderContent = styled.div`
 	h1 {
+		color: ${colors.primary};
 		font-size: 1.2rem;
 		font-weight: 700;
 	}
@@ -64,7 +65,7 @@ export const ShowCardHeaderContent = styled.div`
 `;
 
 export const ShowCardContent = styled.div`
-	border: 3px solid ${colors.primary};
+	border: 3px solid ${colors.white};
 	width: 100%;
 	border-radius: 5px;
 	padding: 0.5rem;

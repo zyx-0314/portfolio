@@ -20,9 +20,9 @@ export function ExperienceSection ( { id }: { id: string } )
 
   const companyListData: ExperienceData[] = [ {
     name: 'Argon Software',
-    logo: '/static/images/nyebe_white_cutout.png',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium?',
-    email: 'example@gsnail.com',
+    logo: '/static/companies/Argon_Software.png',
+    description: 'Software Service Provider',
+    email: 'argonsoftware.info',
     content: [
       "March - June 2023( 4 Months )", "",
       "Software Engineering Intern", "",
@@ -71,7 +71,7 @@ export function ExperienceSection ( { id }: { id: string } )
           <StyledShowCard>
             <StyledShowCardHeader>
               <StyledShowCardLogo>
-                <Image src={ companyListData[ selected ].logo } width={ 150 } height={ 0 } alt='' />
+                <Image src={ companyListData[ selected ].logo } width={ 150 } height={ 0 } alt={ companyListData[ selected ].name } />
               </StyledShowCardLogo>
               <ShowCardHeaderContent>
                 <h1>{ companyListData[ selected ].name }</h1>
