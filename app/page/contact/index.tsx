@@ -15,9 +15,9 @@ export function ContactSection ( { id }: { id: string } )
         <StyledParagraph textAlignment='center'>
           If you find my work appealing and there is a suitable position available within your company, please don&apos;t hesitate to reach out to me. I am eager to join your team and contribute my skills and expertise to make a positive impact. Thank you for considering my profile. Looking forward to the opportunity!
         </StyledParagraph>
-        <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'button-link', href: 'mailto:ramirezian037@gmail.com', className: 'text-2xl' } } />
+        <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.3rem' } } } />
         <p>or Check my Resume</p>
-        <StyledButton params={ { text: 'Resume', type: 'download', filename: 'Ramirez_Ian_Cedric.pdf', className: 'text-2xl' } } />
+        <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 1.3rem' } } } />
       </ContactSubHeader>
 
     </StyledContainer>

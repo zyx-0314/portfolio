@@ -7,10 +7,12 @@ import { StyledContainer } from '@/components/container'
 export function AboutSection ( { id }: { id: string } )
 {
   const listTechs = [
-    'BootStrap',
-    'TailWind',
     'ReactJS',
     'Laravel',
+    'React Native',
+    'BootStrap CSS',
+    'TailWind CSS',
+    'Emotion CSS',
     'SASS/SCSS'
   ]
 
