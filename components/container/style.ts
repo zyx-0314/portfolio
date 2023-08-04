@@ -9,11 +9,11 @@ export const StyledSectionContainer = styled.section`
 	width: 75%;
 	z-index: 10;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1480px) {
 		width: 90%;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		width: 100%;
 	}
 `;
@@ -27,15 +27,19 @@ export const HeroStyledSectionContainer = styled.section`
 	z-index: 10;
 
 	@media (max-width: 1480px) {
+		padding-top: 5rem;
 		height: fit-content;
+		min-height: 85vh;
 		width: 90%;
 		display: flex;
-		flex-direction: column-reverse;
 	}
 
-	@media (max-width: 768px) {
-		padding-top: 3rem;
+	@media (max-width: 1024px) {
 		width: 100%;
+		padding-top: 3rem;
+		height: fit-content;
+		display: flex;
+		flex-direction: column-reverse;
 	}
 `;
 
@@ -49,7 +53,7 @@ export const StyledMainContainer = styled.main`
 	align-items: center;
 	margin: 0 auto;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1480px) {
 		width: 90%;
 	}
 
