@@ -64,7 +64,7 @@ export function StyledButton ( { params: { text, design, type, onClick, href, fi
   {
     case 'Link':
       return (
-        <Link href={ href ? href : '/construction' }>
+        <Link href={ href ? href : '/construction' } title={ text }>
           { StyleSelected( design, text, () => { }, designControl ) }
         </Link>
       )

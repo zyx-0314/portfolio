@@ -17,22 +17,22 @@ export function Floaters ()
     <FloaterContainer>
       <FloaterBorder className='px-10 w-full'>
         <div className='alignment'>
-          <PopupIcon href='https://github.com/zyx-0314' target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://github.com/zyx-0314' target='_blank' rel='noopener noreferrer' title='Github Account'>
             <VscGithub alt='Github Icon' />
           </PopupIcon>
-          <PopupIcon href='https://www.figma.com/@nyebecreations' target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://www.figma.com/@nyebecreations' target='_blank' rel='noopener noreferrer' title='Figma Account'>
             <FaFigma alt='Figma Icon' />
           </PopupIcon>
-          <PopupIcon href='https://www.linkedin.com/in/ian-cedric-ramirez/' target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://www.linkedin.com/in/ian-cedric-ramirez/' target='_blank' rel='noopener noreferrer' title='LinkedIn Account'>
             <AiOutlineLinkedin alt='LinkedIn Icon' />
           </PopupIcon>
-          <PopupIcon href='mailto:ramirezian037@gmail.com'>
+          <PopupIcon href='mailto:ramirezian037@gmail.com' title='Email my Account'>
             <FiMail alt='Email Icon' />
           </PopupIcon>
         </div>
 
         <div className='alignment'>
-          <a href='mailto:ramirezian037@gmail.com'>ramirezian037@gmail.com</a>
+          <a href='mailto:ramirezian037@gmail.com' title='Email my Account'>ramirezian037@gmail.com</a>
         </div>
       </FloaterBorder>
     </FloaterContainer>
