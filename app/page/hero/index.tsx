@@ -5,10 +5,16 @@ import { StyledButton } from '@/components/buttons'
 import { StyledParagraph } from '@/components/paragraph'
 import { StyledContainer } from '@/components/container'
 
+/**
+ * Renders the hero section of a webpage.
+ * 
+ * @param {string} id - The id of the container element.
+ * @returns {JSX.Element} The hero section content.
+ */
 export default function HeroSection ( { id }: { id: string } )
 {
   return (
-    <StyledContainer id={ id } specialType='Hero' className='pt-5 mt-5'>
+    <StyledContainer id={ id } specialType='Hero'>
       <HeroTextContent>
         <Headers>
           <h1>Ian Cedric Ramirez</h1>

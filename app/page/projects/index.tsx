@@ -2,9 +2,16 @@ import React from 'react'
 import { SectionHeader } from '@/components/sectionHeader'
 import { StyledContainer } from '@/components/container'
 import { StyledButton } from '@/components/buttons'
-import { ContentHead, Cover, ProjectContainer, ProjectContent, ProjectContentContainer, ProjectNumber, TechStack, TechStackList } from './style'
+import { ContentHead, CoverStyled, ProjectContainer, ProjectContent, ProjectContentContainer, ProjectNumber, TechStack, TechStackList } from './style'
 
-export function ProjectsSection ( { id }: { id: string } )
+/**
+ * Renders a section displaying a list of projects with their details.
+ * Each project is rendered in a container with a cover and hover effect.
+ * 
+ * @param id - The id of the container element.
+ * @returns A container element with a section header and a list of project containers.
+ */
+export default function ProjectsSection ( { id }: { id: string } )
 {
   const projectList = [
     {
@@ -12,6 +19,7 @@ export function ProjectsSection ( { id }: { id: string } )
       type: 'Web Application',
       description: 'A web-based application that manages the student information of a school. It has a feature that can generate a report of the student information.',
       image: 'SIMS.png',
+      link: '',
       techs: [
         'PHP',
         'MySQL',
@@ -22,6 +30,7 @@ export function ProjectsSection ( { id }: { id: string } )
       type: 'Android Application - Experimental (Research)',
       description: 'A web-based application that can sell products online. It has a feature that can generate a report of the sales.',
       image: 'PUGS.png',
+      link: '',
       techs: [
         'Kotlin',
         'Python',
@@ -30,14 +39,25 @@ export function ProjectsSection ( { id }: { id: string } )
     }
   ]
 
+  /**
+   * Formats the project number.
+   * 
+   * @param index - The index of the project.
+   * @returns The formatted project number.
+   */
+  function formatProjectNumber ( index: number ): string
+  {
+    return index < 10 ? `0${ index + 1 }` : `${ index + 1 }`;
+  }
+
   return (
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } >
+        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined }>
           <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
-            <Cover id='cover'>
-              <ProjectNumber id='number'>{ index < 10 ? `0${ index + 1 }` : index + 1 }</ProjectNumber>
+            <CoverStyled id='cover'>
+              <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
               <ProjectContent id='content'>
                 <ContentHead>
                   <h2>{ project.type }</h2>
@@ -50,7 +70,7 @@ export function ProjectsSection ( { id }: { id: string } )
                   ) ) }
                 </TechStackList>
               </ProjectContent>
-            </Cover>
+            </CoverStyled>
           </ProjectContentContainer>
         </ProjectContainer>
       ) ) }

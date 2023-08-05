@@ -28,7 +28,7 @@ export const Headers = styled.div`
 
 	@media (max-width: 1480px) {
 		h1 {
-			font-size: 3.2rem;
+			font-size: 3rem;
 		}
 
 		h2 {
@@ -39,7 +39,7 @@ export const Headers = styled.div`
 
 	@media (max-width: 1024px) {
 		h1 {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		h2 {
