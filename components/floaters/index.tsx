@@ -1,5 +1,5 @@
 import React from 'react'
-import { FloaterBorder, PopupIcon } from './style'
+import { FloaterBorder, FloaterContainer, PopupIcon } from './style'
 import { VscGithub } from "react-icons/vsc";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FiMail } from "react-icons/fi";
@@ -14,16 +14,16 @@ import { FaFigma } from "react-icons/fa";
 export function Floaters ()
 {
   return (
-    <div className='w-full'>
+    <FloaterContainer>
       <FloaterBorder className='px-10 w-full'>
         <div className='alignment'>
-          <PopupIcon href={ process.env.GITHUB_ACCOUNT } target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://github.com/zyx-0314' target='_blank' rel='noopener noreferrer'>
             <VscGithub alt='Github Icon' />
           </PopupIcon>
-          <PopupIcon href={ process.env.FIGMA_ACCOUNT } target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://www.figma.com/@nyebecreations' target='_blank' rel='noopener noreferrer'>
             <FaFigma alt='Figma Icon' />
           </PopupIcon>
-          <PopupIcon href={ process.env.LINKEDIN_ACCOUNT } target='_blank' rel='noopener noreferrer'>
+          <PopupIcon href='https://www.linkedin.com/in/ian-cedric-ramirez/' target='_blank' rel='noopener noreferrer'>
             <AiOutlineLinkedin alt='LinkedIn Icon' />
           </PopupIcon>
           <PopupIcon href='mailto:ramirezian037@gmail.com'>
@@ -35,6 +35,6 @@ export function Floaters ()
           <a href='mailto:ramirezian037@gmail.com'>ramirezian037@gmail.com</a>
         </div>
       </FloaterBorder>
-    </div>
+    </FloaterContainer>
   );
 }

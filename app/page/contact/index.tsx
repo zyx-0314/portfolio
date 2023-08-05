@@ -13,16 +13,22 @@ import { StyledContainer } from '@/components/container'
  */
 export default function ContactSection ( { id }: { id: string } ): JSX.Element
 {
+  const content = {
+    title: 'Get In Touch',
+    mainDescription: 'If you find my work appealing and there is a suitable position available within your company, please don\'t hesitate to reach out to me. I am eager to join your team and contribute my skills and expertise to make a positive impact. Thank you for considering my profile. Looking forward to the opportunity!',
+    subDescription: 'or Check my Resume'
+  }
+
   return (
     <StyledContainer id={ id }>
       <SectionHeader number=".04" title="Say Hi, If You're Interested." />
       <ContactSubHeader>
-        <h1>Get In Touch</h1>
+        <h1>{ content.title }</h1>
         <StyledParagraph textAlignment="center">
-          If you find my work appealing and there is a suitable position available within your company, please don't hesitate to reach out to me. I am eager to join your team and contribute my skills and expertise to make a positive impact. Thank you for considering my profile. Looking forward to the opportunity!
+          { content.mainDescription }
         </StyledParagraph>
         <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.3rem' } } } />
-        <p>or Check my Resume</p>
+        <p>{ content.subDescription }</p>
         <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 1.3rem' } } } />
       </ContactSubHeader>
     </StyledContainer>

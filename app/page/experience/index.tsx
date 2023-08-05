@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import { useCallback, useState } from 'react'
 import { SectionHeader } from '@/components/sectionHeader'
 import { StyledContainer } from '@/components/container'
 import { ButtonProps, StyledButton } from '@/components/buttons'
@@ -91,7 +90,7 @@ export default function ExperienceSection ( { id }: { id: string } )
                   params={ {
                     ...selectionParams,
                     text: company.name,
-                    onClick: useCallback( () => handleSelected( index ), [ index ] ),
+                    onClick: () => handleSelected( index ),
                   } }
                 />
               </li>
