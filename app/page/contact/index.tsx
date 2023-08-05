@@ -27,9 +27,9 @@ export default function ContactSection ( { id }: { id: string } ): JSX.Element
         <StyledParagraph textAlignment="center">
           { content.mainDescription }
         </StyledParagraph>
-        <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.3rem' } } } />
+        <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.5rem' } } } />
         <p>{ content.subDescription }</p>
-        <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 1.3rem' } } } />
+        <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 3.5rem' } } } />
       </ContactSubHeader>
     </StyledContainer>
   );
