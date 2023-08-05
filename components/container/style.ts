@@ -13,20 +13,22 @@ export const StyledSectionContainer = styled.section`
 		width: 90%;
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 768px) {
 		width: 100%;
 	}
 `;
 
 export const HeroStyledSectionContainer = styled.section`
+	padding-top: 3rem;
 	align-items: center;
 	display: inline-flex;
-	gap: 2rem;
+	gap: 5rem;
 	height: 95vh;
 	width: 75%;
 	z-index: 10;
 
 	@media (max-width: 1480px) {
+		gap: 3rem;
 		padding-top: 5rem;
 		height: fit-content;
 		min-height: 85vh;
@@ -34,9 +36,8 @@ export const HeroStyledSectionContainer = styled.section`
 		display: flex;
 	}
 
-	@media (max-width: 1024px) {
+	@media (max-width: 768px) {
 		width: 100%;
-		padding-top: 3rem;
 		height: fit-content;
 		display: flex;
 		flex-direction: column-reverse;
@@ -58,6 +59,7 @@ export const StyledMainContainer = styled.main`
 	}
 
 	@media (max-width: 768px) {
+		padding: 0 1rem;
 		width: 100%;
 	}
 `;

@@ -1,6 +1,24 @@
 import React from 'react'
 import { LinedButton, PopButton } from './style'
 import Link from 'next/link'
+import { saveAs } from 'file-saver';
+import PropTypes from 'prop-types';
+
+StyledButton.propTypes = {
+  params: PropTypes.shape( {
+    text: PropTypes.string.isRequired,
+    design: PropTypes.oneOf( [ 'Lined', 'PopUp' ] ).isRequired,
+    type: PropTypes.oneOf( [ 'Link', 'Download', 'Action' ] ).isRequired,
+    onClick: PropTypes.func,
+    href: PropTypes.string,
+    filename: PropTypes.string,
+    designControl: PropTypes.shape( {
+      fontSize: PropTypes.string,
+      paddingXY: PropTypes.string,
+      width: PropTypes.string,
+    } )
+  } ).isRequired,
+};
 
 export interface ButtonProps
 {
@@ -20,19 +38,26 @@ export interface DesignControl
   width?: string
 }
 
-export function StyledButton (
-  { params: { text, design, type, onClick, href, filename, designControl } }: { params: ButtonProps }
-)
+/**
+ * Renders a button component with customizable design and behavior based on the input parameters.
+ * 
+ * @param params - An object containing the button parameters.
+ * @returns A button component with customizable design and behavior.
+ */
+export function StyledButton ( { params: { text, design, type, onClick, href, filename, designControl } }: { params: ButtonProps } )
 {
-  const handleDownload = () =>
+  /**
+   * Handles the download functionality when the button is clicked.
+   */
+  function handleDownload ()
   {
+    if ( !filename || !/^[a-zA-Z0-9-_]+\.[a-zA-Z0-9]+$/.test( filename ) )
+    {
+      console.error( 'Invalid filename' );
+      return;
+    }
     const filePath = `/${ filename }`;
-    const link = document.createElement( "a" );
-    link.href = filePath;
-    link.download = filename ? filename : '';
-    document.body.appendChild( link );
-    link.click();
-    document.body.removeChild( link );
+    saveAs( filePath, filename );
   };
 
   switch ( type )
