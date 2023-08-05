@@ -67,7 +67,7 @@ export default function ExperienceSection ( { id }: { id: string } )
   const design = [ '<h1>', '</h1 >' ];
   const companyLink: ButtonProps = {
     text: companyListData[ state.selected ].email,
-    href: `mailto:${ companyListData[ state.selected ].email }`,
+    href: `${ companyListData[ state.selected ].email }`,
     design: 'Lined',
     type: 'Link',
     designControl: { paddingXY: '0', width: 'fit-content' },
