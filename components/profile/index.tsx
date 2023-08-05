@@ -2,6 +2,11 @@ import React from 'react'
 import { StyledProfile } from './style'
 import Image from 'next/image'
 
+/**
+ * Renders a profile image with a cover effect and four rectangular borders.
+ * 
+ * @returns The JSX element representing the profile image.
+ */
 export function Profile ()
 {
   return (
@@ -19,5 +24,5 @@ export function Profile ()
         </div>
       </div>
     </StyledProfile>
-  )
+  );
 }

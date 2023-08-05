@@ -6,12 +6,12 @@ export const HeaderStyles = styled(motion.header)`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 5px;
 	height: fit-content;
 	position: fixed;
 	width: 100%;
-	padding: 1rem 2rem 0 2rem;
+	padding: 1rem 2rem 0.5rem 2rem;
 	z-index: 1000;
+	background: #ffffff15;
 
 	@media (max-width: 768px) {
 		padding: 1rem 1rem 0 1rem;

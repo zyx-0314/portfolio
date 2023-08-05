@@ -1,11 +1,18 @@
 import React from 'react'
-import { GridDisplay } from '@/components/grid'
+import { StyledGridDisplay } from '@/components/grid'
 import { SectionHeader } from '@/components/sectionHeader'
 import { StyledParagraph } from '@/components/paragraph'
 import { StyledContainer } from '@/components/container'
 
-export function AboutSection ( { id }: { id: string } )
+/**
+ * Renders a section of a webpage that provides information about the author, their skills, and their aspirations.
+ * 
+ * @param {string} id - The id of the container element for the section.
+ * @returns {JSX.Element} The rendered section component.
+ */
+export default function AboutSection ( { id }: { id: string } ): JSX.Element
 {
+  // Arrays of strings representing the author's skills
   const listTechs = [
     'ReactJS',
     'Laravel',
@@ -14,7 +21,7 @@ export function AboutSection ( { id }: { id: string } )
     'TailWind CSS',
     'Emotion CSS',
     'SASS/SCSS'
-  ]
+  ];
 
   const listLanguages = [
     'HTML/CSS',
@@ -25,7 +32,7 @@ export function AboutSection ( { id }: { id: string } )
     'Python',
     'C++',
     'Kotlin'
-  ]
+  ];
 
   const listTools = [
     'Git(Github)',
@@ -37,11 +44,11 @@ export function AboutSection ( { id }: { id: string } )
     'Adobe XD',
     'Tableau',
     'Excel'
-  ]
+  ];
 
   return (
     <StyledContainer id={ id }>
-      <SectionHeader number='.01' title='About Me' />
+      <SectionHeader number=".01" title="About Me" />
       <div>
         <StyledParagraph>
           I&apos;m <span>Ian Cedric Ramirez</span>, an aspiring <span>Software Engineer</span> with a passion for creating things that live on the internet.
@@ -54,15 +61,14 @@ export function AboutSection ( { id }: { id: string } )
           <br /> <br />
           Technologies I Currently Use:
         </StyledParagraph>
-        <GridDisplay list={ listTechs } />
+        <StyledGridDisplay list={ listTechs } />
         <br />
         <p>Languages I&apos;ve Tried</p>
-        <GridDisplay list={ listLanguages } />
+        <StyledGridDisplay list={ listLanguages } />
         <br />
         <p>Tools I&apos;ve Used</p>
-        <GridDisplay list={ listTools } />
+        <StyledGridDisplay list={ listTools } />
       </div>
-
     </StyledContainer>
-  )
+  );
 }

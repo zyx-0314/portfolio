@@ -7,6 +7,8 @@ export const FloaterBorder = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: end;
+	width: 100%;
+	/* padding: 0 2rem; */
 
 	.alignment {
 		display: flex;
@@ -48,9 +50,17 @@ export const PopupIcon = styled.a`
 	transition: transform ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
 	color: inherit;
 
+	svg {
+		font-size: 25px;
+	}
+
 	&:hover {
 		transform: translate(0, -4px);
 		scale: 1.3;
 		color: ${colors.primary};
 	}
+`;
+
+export const FloaterContainer = styled.div`
+	width: 100%;
 `;

@@ -1,31 +1,44 @@
 'use client'
-import { Floaters } from '@/components/floaters'
-import { HeaderNavigation } from '@/components/headNav'
-import HeroSection from './page/hero'
-import { AboutSection } from './page/about'
-import { ContactSection } from './page/contact'
-import { ExperienceSection } from './page/experience'
-import { ProjectsSection } from './page/projects'
-import { StyledContainer } from '@/components/container'
 
+import React, { Suspense } from 'react';
+import { Floaters } from '@/components/floaters'
+import { StyledHeaderNavigation } from '@/components/headNav'
+import { StyledContainer } from '@/components/container'
+import styled from '@emotion/styled';
+
+const HeroSection = React.lazy( () => import( './page/hero' ) );
+const AboutSection = React.lazy( () => import( './page/about' ) );
+const ExperienceSection = React.lazy( () => import( './page/experience' ) );
+const ProjectsSection = React.lazy( () => import( './page/projects' ) );
+const ContactSection = React.lazy( () => import( './page/contact' ) );
+
+/**
+ * Renders the home page of the website.
+ * 
+ * @returns The main layout of the home page, including the header, footer, and main content.
+ */
 export default function Home ()
 {
-  const date = new Date()
-
   return (
     <>
       <Floaters />
-      <HeaderNavigation />
-      <div className='px-10'>
+      <StyledHeaderNavigation />
+      <Container>
         <StyledContainer specialType='Main' className="items-center">
-          <HeroSection id='hero' />
-          <AboutSection id='about' />
-          <ExperienceSection id='experience' />
-          <ProjectsSection id='projects' />
-          <ContactSection id='contact' />
+          <Suspense fallback={ <div>Loading....</div> }>
+            <HeroSection id='hero' />
+            <AboutSection id='about' />
+            <ExperienceSection id='experience' />
+            <ProjectsSection id='projects' />
+            <ContactSection id='contact' />
+          </Suspense>
         </StyledContainer>
-        <footer className='flex w-full justify-center pt-5 mt-5 text-xs'>Nyebe Creations - { date.getFullYear() } - v.0.1.2</footer>
-      </div>
+        <footer className='flex w-full justify-center pt-5 mt-5 text-xs pb-3'>Nyebe Creations - { new Date().getFullYear() } - v.0.2.1</footer>
+      </Container>
     </>
-  )
+  );
 }
+
+const Container = styled.div`
+  padding: 0 .5rem;
+`
