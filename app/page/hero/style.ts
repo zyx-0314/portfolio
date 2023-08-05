@@ -32,18 +32,18 @@ export const Headers = styled.div`
 		}
 
 		h2 {
-			font-size: 2.2rem;
+			font-size: 2rem;
 			width: 75%;
 		}
 	}
 
 	@media (max-width: 1024px) {
 		h1 {
-			font-size: 2.5rem;
+			font-size: 2.3rem;
 		}
 
 		h2 {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			width: 75%;
 		}
 	}
@@ -53,4 +53,8 @@ export const HeroTextContent = styled.div`
 	align-items: flex-start;
 	display: grid;
 	gap: 3rem;
+
+	@media (max-width: 1024px) {
+		gap: 2rem;
+	}
 `;

@@ -5,6 +5,7 @@ import { Floaters } from '@/components/floaters'
 import { StyledHeaderNavigation } from '@/components/headNav'
 import { StyledContainer } from '@/components/container'
 import styled from '@emotion/styled';
+import Head from 'next/head';
 
 const HeroSection = React.lazy( () => import( './page/hero' ) );
 const AboutSection = React.lazy( () => import( './page/about' ) );
@@ -19,8 +20,32 @@ const ContactSection = React.lazy( () => import( './page/contact' ) );
  */
 export default function Home ()
 {
+  function addProductJsonLd ()
+  {
+    return {
+      __html: `{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Ian Ramirez",
+  "jobTitle": "Software Engineer",
+  "url": "https://ian-cedric-ramirez.vercel.app/",
+  "description": "Passionate software engineer with expertise in crafting innovative solutions.",
+  "sameAs": [
+    "https://www.linkedin.com/in/ian-cedric-ramirez/",
+    "https://github.com/zyx-0314"
+  ]
+}`
+    }
+  }
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={ addProductJsonLd() }
+          key="product-jsonld"
+        />
+      </Head>
       <Floaters />
       <StyledHeaderNavigation />
       <Container>
