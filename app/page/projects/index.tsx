@@ -54,14 +54,14 @@ export default function ProjectsSection ( { id }: { id: string } )
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined }>
+        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } title={ project.title }>
           <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
             <CoverStyled id='cover'>
               <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
               <ProjectContent id='content'>
                 <ContentHead>
-                  <h2>{ project.type }</h2>
-                  <h1>{ project.title }</h1>
+                  <h3>{ project.type }</h3>
+                  <h2>{ project.title }</h2>
                 </ContentHead>
                 <p id='hidden'>{ project.description }</p>
                 <TechStackList id='hidden'>
