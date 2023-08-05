@@ -8,7 +8,7 @@ export const SectionHeaderStyles = styled.div`
 	position: relative;
 `;
 
-export const SectionHeaderNumberStyles = styled.h1`
+export const SectionHeaderNumberStyles = styled.span`
 	height: 2rem;
 	position: relative;
 	width: 2.1;
@@ -45,7 +45,7 @@ export const SectionHeaderTitleStyles = styled.div`
 	position: relative;
 	width: 100%;
 
-	h1 {
+	h5 {
 		font-size: 1.75rem;
 		font-weight: 700;
 		letter-spacing: 1px;
@@ -68,7 +68,7 @@ export const SectionHeaderTitleStyles = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		h1 {
+		h5 {
 			font-size: 1.5rem;
 		}
 
