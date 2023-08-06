@@ -1,7 +1,7 @@
 import { colors } from './../../../components/variables/index';
 import styled from '@emotion/styled';
 
-export const ProjectContainer = styled.a<{ value: number }>`
+export const ProjectContainer = styled.div<{ value: number }>`
 	display: flex;
 	${({ value }) =>
 		value % 2 ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
@@ -15,6 +15,10 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 	background-size: cover;
 	min-height: 300px;
 	transition: all ease-in-out 0.15s;
+
+	p {
+		font-size: 0.9rem;
+	}
 
 	#number {
 		position: relative;
@@ -83,12 +87,6 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 
 		#hidden {
 			opacity: 1;
-		}
-
-		&:hover {
-			#number {
-				bottom: 2rem;
-			}
 		}
 	}
 `;
