@@ -1,7 +1,7 @@
 import { colors } from './../../../components/variables/index';
 import styled from '@emotion/styled';
 
-export const ProjectContainer = styled.a<{ value: number }>`
+export const ProjectContainer = styled.div<{ value: number }>`
 	display: flex;
 	${({ value }) =>
 		value % 2 ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}

@@ -54,7 +54,8 @@ export default function ProjectsSection ( { id }: { id: string } )
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }>
+        <ProjectContainer value={ index } key={ index }>
+          {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
           <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
             <CoverStyled id='cover'>
               <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
