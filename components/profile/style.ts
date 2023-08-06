@@ -61,7 +61,6 @@ export const StyledProfile = styled.div`
 
 			.image {
 				transition: all 0.1s ease-in-out;
-
 				height: 12.5rem;
 				left: 0.8rem;
 				top: 0.8rem;
@@ -71,6 +70,10 @@ export const StyledProfile = styled.div`
 				border-color: #fcfcfc;
 				border-radius: 0.3rem;
 				position: absolute;
+
+				img {
+					object-fit: fill;
+				}
 			}
 
 			.cover {

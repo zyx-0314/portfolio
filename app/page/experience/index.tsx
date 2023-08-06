@@ -43,9 +43,9 @@ export default function ExperienceSection ( { id }: { id: string } )
       name: 'Argon Software',
       logo: '/static/companies/Argon_Software.png',
       description: 'Software Service Provider',
-      email: 'argonsoftware.info',
+      email: 'https://argonsoftware.info/',
       content: [
-        'March - June 2023( 4 Months )',
+        'March - June 2023 ( 4 Months )',
         '',
         'Software Engineering Intern',
         '',
@@ -69,7 +69,7 @@ export default function ExperienceSection ( { id }: { id: string } )
     text: companyListData[ state.selected ].email,
     href: `${ companyListData[ state.selected ].email }`,
     design: 'Lined',
-    type: 'Link',
+    type: 'Link-NewTab',
     designControl: { paddingXY: '0', width: 'fit-content' },
   };
 

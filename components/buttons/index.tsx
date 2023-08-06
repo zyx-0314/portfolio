@@ -8,7 +8,7 @@ StyledButton.propTypes = {
   params: PropTypes.shape( {
     text: PropTypes.string.isRequired,
     design: PropTypes.oneOf( [ 'Lined', 'PopUp' ] ).isRequired,
-    type: PropTypes.oneOf( [ 'Link', 'Download', 'Action' ] ).isRequired,
+    type: PropTypes.oneOf( [ 'Link-NewTab', 'Link-InPage', 'Download', 'Action' ] ).isRequired,
     onClick: PropTypes.func,
     href: PropTypes.string,
     filename: PropTypes.string,
@@ -24,7 +24,7 @@ export interface ButtonProps
 {
   text: string
   design: 'Lined' | 'PopUp'
-  type: 'Link' | 'Download' | 'Action'
+  type: 'Link-NewTab' | 'Link-InPage' | 'Download' | 'Action'
   onClick?: () => any | ( ( ...args: any[] ) => any );
   href?: string
   filename?: string
@@ -62,28 +62,33 @@ export function StyledButton ( { params: { text, design, type, onClick, href, fi
 
   switch ( type )
   {
-    case 'Link':
+    case 'Link-NewTab':
+      return (
+        <Link href={ href ? href : '/construction' } target='_blank' rel='noopener noreferrer' title={ text }>
+          { getStyleSelected( design, text, () => { }, designControl ) }
+        </Link>
+      )
+    case 'Link-InPage':
       return (
         <Link href={ href ? href : '/construction' } title={ text }>
-          { StyleSelected( design, text, () => { }, designControl ) }
+          { getStyleSelected( design, text, () => { }, designControl ) }
         </Link>
       )
     case 'Download':
-      return StyleSelected( design, text, handleDownload, designControl )
+      return getStyleSelected( design, text, handleDownload, designControl )
     case 'Action':
-      return StyleSelected( design, text, onClick, designControl )
+      return getStyleSelected( design, text, onClick, designControl )
   }
 }
 
-function StyleSelected ( style: 'Lined' | 'PopUp', text: string, onClick?: () => any, designControl?: DesignControl ): JSX.Element
+function getStyleSelected ( style: 'Lined' | 'PopUp', text: string, onClick?: () => any, designControl?: DesignControl ): JSX.Element
 {
+
+  text = text.replaceAll( 'https://', '' ).replace( '/', '' );
   switch ( style )
   {
     case 'Lined':
-      return <LinedButton onClick={ onClick } designControl={ designControl }>
-        { text }
-        <hr />
-      </LinedButton>
+      return <LinedButton onClick={ onClick } designControl={ designControl }>{ text }<hr /></LinedButton>
     case 'PopUp':
       return <PopButton onClick={ onClick } designControl={ designControl }> { text } </PopButton>
   }
