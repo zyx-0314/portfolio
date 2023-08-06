@@ -132,37 +132,37 @@ export const ContentHead = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	h1 {
+	h2 {
 		font-size: 3rem;
 		font-weight: 700;
 		color: ${colors.primary};
 		line-height: 3.2rem;
 	}
 
-	h2 {
+	h3 {
 		letter-spacing: 3px;
 		font-size: 1rem;
 		text-transform: uppercase;
 	}
 
 	@media (max-width: 1024px) {
-		h1 {
+		h2 {
 			font-size: 2rem;
 			line-height: 2.5rem;
 		}
 
-		h2 {
+		h3 {
 			font-size: 0.8rem;
 		}
 	}
 
 	@media (max-width: 768px) {
-		h1 {
+		h2 {
 			font-size: 1.5rem;
 			line-height: 1.5rem;
 		}
 
-		h2 {
+		h3 {
 			font-size: 0.6rem;
 		}
 	}

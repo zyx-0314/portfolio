@@ -23,7 +23,7 @@ export default function ContactSection ( { id }: { id: string } ): JSX.Element
     <StyledContainer id={ id }>
       <SectionHeader number=".04" title="Say Hi, If You're Interested." />
       <ContactSubHeader>
-        <h1>{ content.title }</h1>
+        <h4>{ content.title }</h4>
         <StyledParagraph textAlignment="center">
           { content.mainDescription }
         </StyledParagraph>

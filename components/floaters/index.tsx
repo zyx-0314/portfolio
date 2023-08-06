@@ -26,13 +26,13 @@ export function Floaters ()
           <PopupIcon href='https://www.linkedin.com/in/ian-cedric-ramirez/' target='_blank' rel='noopener noreferrer' title='LinkedIn Link'>
             <AiOutlineLinkedin alt='LinkedIn Icon' />
           </PopupIcon>
-          <PopupIcon href='mailto:ramirezian037@gmail.com' title='Email Link'>
+          <PopupIcon href='mailto:ramirezian037@gmail.com' title='Email my Account'>
             <FiMail alt='Email Icon' />
           </PopupIcon>
         </div>
 
         <div className='alignment'>
-          <a href='mailto:ramirezian037@gmail.com' title='Email Link'>ramirezian037@gmail.com</a>
+          <a href='mailto:ramirezian037@gmail.com' title='Email my Account'>ramirezian037@gmail.com</a>
         </div>
       </FloaterBorder>
     </FloaterContainer>
