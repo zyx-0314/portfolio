@@ -30,7 +30,7 @@ export function SectionHeader ( { number, title }: SectionHeaderProps )
         </div>
       </SectionHeaderNumberStyles>
       <SectionHeaderTitleStyles>
-        <h5>{ title }</h5>
+        <h4>{ title }</h4>
         <span></span>
       </SectionHeaderTitleStyles>
     </SectionHeaderStyles>

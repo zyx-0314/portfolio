@@ -45,7 +45,7 @@ export const SectionHeaderTitleStyles = styled.div`
 	position: relative;
 	width: 100%;
 
-	h5 {
+	h4 {
 		font-size: 1.75rem;
 		font-weight: 700;
 		letter-spacing: 1px;
@@ -68,7 +68,7 @@ export const SectionHeaderTitleStyles = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		h5 {
+		h4 {
 			font-size: 1.5rem;
 		}
 

@@ -66,13 +66,13 @@ export const StyledShowCardLogo = styled.div`
 `;
 
 export const ShowCardHeaderContent = styled.div`
-	h1 {
+	h2 {
 		color: ${colors.primary};
 		font-size: 1.2rem;
 		font-weight: 700;
 	}
 
-	h2 {
+	h3 {
 		font-size: 1rem;
 	}
 
@@ -81,11 +81,11 @@ export const ShowCardHeaderContent = styled.div`
 	}
 
 	@media (max-width: 768px) {
-		h1 {
+		h2 {
 			font-size: 1rem;
 		}
 
-		h2 {
+		h3 {
 			font-size: 0.8rem;
 		}
 	}
