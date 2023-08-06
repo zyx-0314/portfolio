@@ -16,6 +16,10 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 	min-height: 300px;
 	transition: all ease-in-out 0.15s;
 
+	p {
+		font-size: 0.9rem;
+	}
+
 	#number {
 		position: relative;
 		opacity: 0;
@@ -83,12 +87,6 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 
 		#hidden {
 			opacity: 1;
-		}
-
-		&:hover {
-			#number {
-				bottom: 2rem;
-			}
 		}
 	}
 `;
