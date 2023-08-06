@@ -16,10 +16,10 @@ export function StyledHeaderNavigation ()
 {
   // Array of button objects for navigation buttons
   const buttonList: ButtonProps[] = [
-    { text: 'About', href: '#about', type: 'Link', design: 'Lined' },
-    { text: 'Experience', href: '#experience', type: 'Link', design: 'Lined' },
-    { text: 'Projects', href: '#projects', type: 'Link', design: 'Lined' },
-    { text: 'Contact', href: '#contact', type: 'Link', design: 'Lined' },
+    { text: 'About', href: '#about', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Experience', href: '#experience', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Projects', href: '#projects', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Contact', href: '#contact', type: 'Link-InPage', design: 'Lined' },
     { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'Download', design: 'PopUp' }
   ];
 
