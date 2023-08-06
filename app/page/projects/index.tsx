@@ -23,7 +23,8 @@ export default function ProjectsSection ( { id }: { id: string } )
         'PHP',
         'MySQL',
         'Bootstrap CSS',
-      ]
+      ],
+      schema: 'WebApplication'
     }, {
       title: 'Path utility Guide System',
       type: 'Android Application - Experimental (Research)',
@@ -35,7 +36,8 @@ export default function ProjectsSection ( { id }: { id: string } )
         'Python',
         'JavaScript',
         'TensorFlow'
-      ]
+      ],
+      schema: 'MobileApplication'
     }
   ]
 
@@ -54,16 +56,17 @@ export default function ProjectsSection ( { id }: { id: string } )
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }>
-          <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
+        <ProjectContainer value={ index } key={ index } itemScope itemType={ `https://schema.org/${ project.schema }` }>
+          {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
+          <ProjectContentContainer image={ `/static/projects/${ project.image }` } itemProp='image'>
             <CoverStyled id='cover'>
               <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
               <ProjectContent id='content'>
                 <ContentHead>
-                  <h3>{ project.type }</h3>
-                  <h2>{ project.title }</h2>
+                  <h3 itemProp='applicationCategory'>{ project.type }</h3>
+                  <h2 itemProp='name'>{ project.title }</h2>
                 </ContentHead>
-                <p id='hidden'>{ project.description }</p>
+                <p id='hidden' itemProp='about'>{ project.description }</p>
                 <TechStackList id='hidden'>
                   { project.techs.map( ( tech, index ) => (
                     <TechStack key={ index }>{ tech }</TechStack>

@@ -109,8 +109,8 @@ export default function ExperienceSection ( { id }: { id: string } )
                 />
               </StyledShowCardLogo>
               <ShowCardHeaderContent>
-                <h1>{ companyListData[ state.selected ].name }</h1>
-                <h2>{ companyListData[ state.selected ].description }</h2>
+                <h2>{ companyListData[ state.selected ].name }</h2>
+                <h3>{ companyListData[ state.selected ].description }</h3>
                 <div>
                   <StyledButton params={ companyLink } />
                 </div>
