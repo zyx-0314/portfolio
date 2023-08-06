@@ -1,7 +1,6 @@
 import React from 'react'
 import { SectionHeader } from '@/components/sectionHeader'
 import { StyledContainer } from '@/components/container'
-import { StyledButton } from '@/components/buttons'
 import { ContentHead, CoverStyled, ProjectContainer, ProjectContent, ProjectContentContainer, ProjectNumber, TechStack, TechStackList } from './style'
 
 /**
@@ -28,13 +27,14 @@ export default function ProjectsSection ( { id }: { id: string } )
     }, {
       title: 'Path utility Guide System',
       type: 'Android Application - Experimental (Research)',
-      description: 'A web-based application that can sell products online. It has a feature that can generate a report of the sales.',
+      description: 'An android application that can guide the user in their path by using Neural Networks Algorithms inbeded in the Application. It has a feature that can detect the objects spatial location, approximate distance, Danger Guage and Object Class by using Neural Networks Algorithms inbeded in the Application.',
       image: 'PUGS.png',
       link: '',
       techs: [
         'Kotlin',
         'Python',
-        'JavaScript'
+        'JavaScript',
+        'TensorFlow'
       ]
     }
   ]
@@ -54,7 +54,7 @@ export default function ProjectsSection ( { id }: { id: string } )
     <StyledContainer id={ id }>
       <SectionHeader number='.03' title='Some of my Works.' />
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } title={ project.title }>
+        <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }>
           <ProjectContentContainer image={ `/static/projects/${ project.image }` }>
             <CoverStyled id='cover'>
               <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
