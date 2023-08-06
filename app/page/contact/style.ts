@@ -11,7 +11,7 @@ export const ContactSubHeader = styled.div`
 		text-align: center;
 	}
 
-	h4 {
+	h3 {
 		font-size: 3rem;
 		font-weight: 700;
 	}
@@ -21,14 +21,14 @@ export const ContactSubHeader = styled.div`
 			width: 90%;
 		}
 
-		h4 {
+		h3 {
 			font-size: 2rem;
 			font-weight: 500;
 		}
 	}
 
 	@media (max-width: 768px) {
-		h4 {
+		h3 {
 			font-size: 1.6rem;
 			font-weight: 500;
 		}

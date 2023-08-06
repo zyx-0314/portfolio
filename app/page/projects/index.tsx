@@ -61,7 +61,7 @@ export default function ProjectsSection ( { id }: { id: string } )
               <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
               <ProjectContent id='content'>
                 <ContentHead>
-                  <h4>{ project.type }</h4>
+                  <h3>{ project.type }</h3>
                   <h2>{ project.title }</h2>
                 </ContentHead>
                 <p id='hidden'>{ project.description }</p>

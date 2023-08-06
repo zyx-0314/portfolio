@@ -137,7 +137,7 @@ export const ContentHead = styled.div`
 		line-height: 3.2rem;
 	}
 
-	h4 {
+	h3 {
 		letter-spacing: 3px;
 		font-size: 1rem;
 		text-transform: uppercase;
@@ -149,7 +149,7 @@ export const ContentHead = styled.div`
 			line-height: 2.5rem;
 		}
 
-		h4 {
+		h3 {
 			font-size: 0.8rem;
 		}
 	}
@@ -160,7 +160,7 @@ export const ContentHead = styled.div`
 			line-height: 1.5rem;
 		}
 
-		h4 {
+		h3 {
 			font-size: 0.6rem;
 		}
 	}

@@ -64,13 +64,11 @@ export default function RootLayout ( {
 } )
 {
   return (
-    <>
+    <html lang="en">
       <head>
         <link rel="icon" href="favicon.ico" type='image/x-icon' />
       </head>
-      <html lang="en">
-        <body className={ `${ poppins.className } bg-slate-900` }>{ children }</body>
-      </html>
-    </>
+      <body className={ `${ poppins.className } bg-slate-900` }>{ children }</body>
+    </html>
   )
 }
