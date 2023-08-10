@@ -88,6 +88,17 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 		#hidden {
 			opacity: 1;
 		}
+
+		&:hover {
+			#number {
+				bottom: 4rem;
+			}
+
+			#cover {
+				background: linear-gradient(30deg, #262335 0.03%, #262335bf 100%);
+				transition: all ease-in-out 0.2s;
+			}
+		}
 	}
 `;
 
