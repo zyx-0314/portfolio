@@ -67,7 +67,7 @@ export default function RootLayout ( {
   return (
     <html lang="en">
       <head>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-M8ZG88N3RW"></Script>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-M8ZG88N3RW" />
         <Script
           id="gtag-analytics"
           strategy='afterInteractive'
@@ -75,7 +75,7 @@ export default function RootLayout ( {
           { `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());n
+            gtag('js', new Date());
             gtag('config', 'G-M8ZG88N3RW', {
               page_path: window.location.pathname,
             });
