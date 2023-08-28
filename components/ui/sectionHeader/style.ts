@@ -34,6 +34,12 @@ export const SectionHeaderNumberStyles = styled.span`
 			top: 0.25rem;
 		}
 	}
+
+	@media (max-width: 425px) {
+		div span {
+			font-size: 0.8rem;
+		}
+	}
 `;
 
 export const SectionHeaderTitleStyles = styled.div`

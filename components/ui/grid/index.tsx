@@ -8,7 +8,7 @@ StyledGridDisplay.propTypes = {
 
 interface GridProps
 {
-  list: string[]
+  list: { name: string, icon: any }[]
 }
 
 /**
@@ -22,11 +22,11 @@ export function StyledGridDisplay ( { list }: GridProps ): JSX.Element
 {
   return (
     <GridContainerStyle>
-      { list.map( ( word, index ) => (
+      { list.map( ( { name, icon }, index ) => (
         <WordItemStyle key={ index } className='grid-item'>
           <div className='flex gap-x-1'>
-            <span>&gt;</span>
-            <p> { word } </p>
+            { icon }
+            <p> { name } </p>
           </div>
         </WordItemStyle>
       ) ) }
