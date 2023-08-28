@@ -29,8 +29,12 @@ export const ContactSubHeader = styled.div`
 
 	@media (max-width: 768px) {
 		h3 {
-			font-size: 1.6rem;
+			font-size: 1rem;
 			font-weight: 500;
+		}
+
+		p {
+			font-size: 0.7rem;
 		}
 	}
 `;

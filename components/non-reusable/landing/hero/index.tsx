@@ -1,9 +1,11 @@
-import { Profile } from '@/components/profile/index'
 import React from 'react'
+
 import { Headers, HeroTextContent } from './style'
-import { StyledButton } from '@/components/buttons'
-import { StyledParagraph } from '@/components/paragraph'
-import { StyledContainer } from '@/components/container'
+
+import { Profile } from '@/components/ui/profile'
+import { StyledButton } from '@/components/ui/buttons'
+import { StyledParagraph } from '@/components/ui/paragraph'
+import { StyledContainer } from '@/components/ui/container'
 
 /**
  * Renders the hero section of a webpage.

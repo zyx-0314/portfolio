@@ -5,6 +5,10 @@ export const GridContainerStyle = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	gap: 5px;
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	}
 `;
 
 export const WordItemStyle = styled.div`
@@ -23,6 +27,13 @@ export const WordItemStyle = styled.div`
 			span {
 				border-bottom: 2px solid transparent;
 			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: fit-content;
+		p {
+			font-size: 0.7rem;
 		}
 	}
 `;

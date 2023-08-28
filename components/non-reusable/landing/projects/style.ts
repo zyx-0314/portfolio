@@ -1,5 +1,5 @@
-import { colors } from './../../../components/variables/index';
 import styled from '@emotion/styled';
+import { colors } from '@/components/ui/variables';
 
 export const ProjectContainer = styled.div<{ value: number }>`
 	display: flex;
@@ -75,10 +75,14 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 	}
 
 	@media (max-width: 768px) {
+		p {
+			font-size: 0.7rem;
+		}
+
 		#number {
 			opacity: 1;
-			font-size: 5rem;
-			bottom: 2rem;
+			font-size: 3rem;
+			bottom: 1.5rem;
 		}
 
 		#content {
@@ -91,7 +95,7 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 
 		&:hover {
 			#number {
-				bottom: 4rem;
+				bottom: 3rem;
 			}
 
 			#cover {
@@ -167,7 +171,7 @@ export const ContentHead = styled.div`
 
 	@media (max-width: 768px) {
 		h2 {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			line-height: 1.5rem;
 		}
 

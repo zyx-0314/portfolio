@@ -1,6 +1,8 @@
-import { DesignControl } from './index';
-import { colors } from '../variables';
 import styled from '@emotion/styled';
+
+import { DesignControl } from './index';
+
+import { colors } from '@/components/ui/variables';
 
 interface Props {
 	designControl?: DesignControl;
@@ -73,5 +75,6 @@ export const PopButton = styled.div<Props>`
 
 	@media (max-width: 768px) {
 		color: ${colors.primary};
+		font-size: 0.7rem;
 	}
 `;
