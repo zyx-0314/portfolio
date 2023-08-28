@@ -64,8 +64,11 @@ You can check the UI/UX Design in [Figma](https://www.figma.com/community/file/1
 ## Versions ✅
 
 Version List.
-- 01.00.00
+- v.1.0.0
   - Based From 2023 Resume After Graduation in College.
+- v.1.0.6
+  - Improve Display for Mobile
+  - Add New Project
 
 <!-- - xx.xx.xx (Major Version . Minor Version . Patch Version) -->
   <!-- - Description -->
@@ -78,7 +81,8 @@ Version List.
 
 ## Road Map 📌
 
-- Add Volunteer works
+- Add Volunteer Works
+- Add Project Page
 
 <br />
 
