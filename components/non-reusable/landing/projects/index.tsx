@@ -38,7 +38,7 @@ export default function ProjectsSection ( { id }: { id: string } )
       ],
       schema: 'WebApplication'
     }, {
-      title: 'Path utility Guide System',
+      title: 'Path Utility Guide System',
       type: 'Android Application - Experimental (Research)',
       description: 'An android application that can guide the user in their path by using Neural Networks Algorithms inbeded in the Application. It has a feature that can detect the objects spatial location, approximate distance, Danger Guage and Object Class by using Neural Networks Algorithms inbeded in the Application.',
       image: 'PUGS.png',
@@ -48,6 +48,20 @@ export default function ProjectsSection ( { id }: { id: string } )
         'Python',
         'JavaScript',
         'TensorFlow'
+      ],
+      schema: 'MobileApplication'
+    }, {
+      title: 'ECommerce CMS',
+      type: 'Sample Demo for Full Stack Development',
+      description: 'I\'ve developed a comprehensive e- commerce Content Management System( CMS ) sample project showcasing my prowess in Next.js.The frontend, built with Next.js, delivers a seamless user experience with dynamic product listings and an intuitive cart.Leveraging APIs, the frontend communicates flawlessly with the backend, which I\'ve developed using Node.js. The backend manages product data, user authentication, and order processing, ensuring security and reliability. This project exemplifies my expertise in full-stack development, API integration, and creating dynamic, efficient e-commerce platforms.',
+      image: 'Ecommerce_CMS.png',
+      link: '',
+      techs: [
+        'NextJS',
+        'MySQL',
+        'Prisma',
+        'Tailwind CSS',
+        'Stripe - Clerk'
       ],
       schema: 'MobileApplication'
     }
