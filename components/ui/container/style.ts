@@ -29,7 +29,7 @@ export const HeroStyledSectionContainer = styled.section`
 
 	@media (max-width: 1480px) {
 		gap: 3rem;
-		padding-top: 5rem;
+		padding-top: 4rem;
 		height: fit-content;
 		min-height: 85vh;
 		width: 90%;
@@ -37,6 +37,7 @@ export const HeroStyledSectionContainer = styled.section`
 	}
 
 	@media (max-width: 768px) {
+		padding-top: 2rem;
 		width: 100%;
 		height: fit-content;
 		display: flex;
