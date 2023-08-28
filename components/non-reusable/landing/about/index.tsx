@@ -1,9 +1,22 @@
 import React from 'react'
+import { GrMysql } from 'react-icons/gr'
+import { VscGithub } from 'react-icons/vsc'
+import { TbBrandCss3 } from 'react-icons/tb'
+import { IoLogoTableau } from 'react-icons/io5'
+import { AiOutlineAndroid } from 'react-icons/ai'
+import { BiLogoTailwindCss } from 'react-icons/bi'
+import { RiBootstrapLine, RiFileExcel2Line } from 'react-icons/ri'
+import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
+import { FaLaravel, FaReact, FaSass, FaPhp, FaFigma } from 'react-icons/fa'
+import { TbBrandPython, TbBrandKotlin, TbBrandDocker } from 'react-icons/tb'
+import { SiCplusplus, SiPostman, SiInsomnia, SiAdobexd } from 'react-icons/si'
 
 import { StyledGridDisplay } from '@/components/ui/grid'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledParagraph } from '@/components/ui/paragraph'
 import { StyledContainer } from '@/components/ui/container'
+
+import { CategoryHeadings } from './style'
 
 /**
  * Renders a section of a webpage that provides information about the author, their skills, and their aspirations.
@@ -14,28 +27,41 @@ import { StyledContainer } from '@/components/ui/container'
 export default function AboutSection ( { id }: { id: string } ): JSX.Element
 {
   // Arrays of strings representing the author's skills
+
   const listTechs = [
-    'ReactJS',
-    'Laravel',
-    'React Native',
-    'BootStrap CSS',
-    'TailWind CSS',
-    'Emotion CSS',
-    'SASS/SCSS'
-  ];
+    { name: 'ReactJS', icon: <FaReact /> },
+    { name: 'Laravel', icon: <FaLaravel /> },
+    { name: 'React Native', icon: <FaReact /> },
+    { name: 'BootStrap CSS', icon: <RiBootstrapLine /> },
+    { name: 'TailWind CSS', icon: <BiLogoTailwindCss /> },
+    { name: 'Emotion CSS', icon: <TbBrandCss3 /> },
+    { name: 'SASS/SCSS', icon: <FaSass /> }
+  ]
 
   const listLanguages = [
-    'HTML/CSS',
-    'JavaScript',
-    'TypeScript',
-    'PHP',
-    'SQL',
-    'Python',
-    'C++',
-    'Kotlin'
-  ];
+    { name: 'HTML/CSS', icon: <><TbBrandCss3 /><TbBrandCss3 /></> },
+    { name: 'JavaScript', icon: <TbBrandJavascript /> },
+    { name: 'TypeScript', icon: <TbBrandTypescript /> },
+    { name: 'PHP', icon: <FaPhp /> },
+    { name: 'SQL', icon: <GrMysql /> },
+    { name: 'Python', icon: <TbBrandPython /> },
+    { name: 'C++', icon: <SiCplusplus /> },
+    { name: 'Kotlin', icon: <TbBrandKotlin /> }
+  ]
 
   const listTools = [
+    { name: 'Git(Github)', icon: <VscGithub /> },
+    { name: 'Docker', icon: <TbBrandDocker /> },
+    { name: 'Postman', icon: <SiPostman /> },
+    { name: 'Insomnia', icon: <SiInsomnia /> },
+    { name: 'Android Studio', icon: <AiOutlineAndroid /> },
+    { name: 'Figma', icon: <FaFigma /> },
+    { name: 'Adobe XD', icon: <SiAdobexd /> },
+    { name: 'Tableau', icon: <IoLogoTableau /> },
+    { name: 'Excel', icon: <RiFileExcel2Line /> }
+  ]
+
+  const listToolss = [
     'Git(Github)',
     'Docker',
     'Postman',
@@ -60,16 +86,20 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
           <br /> <br />
           If you have any openings or know of exciting opportunities, I&apos;d love to connect and discuss how I can be a valuable asset to your team. Let&apos;s make amazing things together!
           <br /> <br />
-          Technologies I Currently Use:
         </StyledParagraph>
+        <CategoryHeadings>
+          Technologies I Currently Use:
+        </CategoryHeadings>
         <StyledGridDisplay list={ listTechs } />
         <br />
-        <StyledParagraph>
+        <CategoryHeadings>
           Languages I&apos;ve Tried
-        </StyledParagraph>
+        </CategoryHeadings>
         <StyledGridDisplay list={ listLanguages } />
         <br />
-        <StyledParagraph>Tools I&apos;ve Used</StyledParagraph>
+        <CategoryHeadings>
+          Tools I&apos;ve Used
+        </CategoryHeadings>
         <StyledGridDisplay list={ listTools } />
       </div>
     </StyledContainer>

@@ -76,12 +76,12 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 
 	@media (max-width: 768px) {
 		p {
-			font-size: 0.7rem;
+			font-size: 0.9rem;
 		}
 
 		#number {
 			opacity: 1;
-			font-size: 3rem;
+			font-size: 5rem;
 			bottom: 1.5rem;
 		}
 
@@ -102,6 +102,16 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 				background: linear-gradient(30deg, #262335 0.03%, #262335bf 100%);
 				transition: all ease-in-out 0.2s;
 			}
+		}
+	}
+
+	@media (max-width: 425px) {
+		p {
+			font-size: 0.7rem;
+		}
+
+		#number {
+			font-size: 3rem;
 		}
 	}
 `;
@@ -170,6 +180,17 @@ export const ContentHead = styled.div`
 	}
 
 	@media (max-width: 768px) {
+		h2 {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+
+		h3 {
+			font-size: 0.8rem;
+		}
+	}
+
+	@media (max-width: 425px) {
 		h2 {
 			font-size: 1.2rem;
 			line-height: 1.5rem;

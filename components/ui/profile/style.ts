@@ -75,24 +75,6 @@ export const StyledProfile = styled.div`
 					object-fit: fill;
 				}
 			}
-
-			.cover {
-				transition: all 0.1s ease-in-out;
-				background: linear-gradient(
-					180deg,
-					#26233500 0%,
-					#26233566 58.85%,
-					#262335b3 85.42%,
-					#262335bf 100%
-				);
-				height: 12.5rem;
-				left: 0.8rem;
-				top: 0.8rem;
-				width: 12.5rem;
-				border-radius: 0.3rem;
-				position: absolute;
-				z-index: 5;
-			}
 		}
 
 		&:hover {
@@ -125,21 +107,11 @@ export const StyledProfile = styled.div`
 					top: 10rem;
 				}
 
-				.image,
-				.cover {
+				.image {
 					height: 14rem;
 					width: 14rem;
 					left: 0;
 					top: 0rem;
-				}
-
-				.cover {
-					background: linear-gradient(
-						180deg,
-						rgba(38, 35, 53, 0) 0%,
-						rgba(38, 35, 53, 0.4) 85%,
-						rgba(38, 35, 53, 0.75) 100%
-					);
 				}
 			}
 		}
