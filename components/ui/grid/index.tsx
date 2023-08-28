@@ -24,8 +24,10 @@ export function StyledGridDisplay ( { list }: GridProps ): JSX.Element
     <GridContainerStyle>
       { list.map( ( { name, icon }, index ) => (
         <WordItemStyle key={ index } className='grid-item'>
-          <div className='flex gap-x-1'>
-            { icon }
+          <div className='container'>
+            <div className='icon'>
+              { icon }
+            </div>
             <p> { name } </p>
           </div>
         </WordItemStyle>

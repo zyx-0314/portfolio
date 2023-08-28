@@ -1,7 +1,7 @@
 import React from 'react'
 import { GrMysql } from 'react-icons/gr'
 import { VscGithub } from 'react-icons/vsc'
-import { TbBrandCss3 } from 'react-icons/tb'
+import { TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb'
 import { IoLogoTableau } from 'react-icons/io5'
 import { AiOutlineAndroid } from 'react-icons/ai'
 import { BiLogoTailwindCss } from 'react-icons/bi'
@@ -11,10 +11,11 @@ import { FaLaravel, FaReact, FaSass, FaPhp, FaFigma } from 'react-icons/fa'
 import { TbBrandPython, TbBrandKotlin, TbBrandDocker } from 'react-icons/tb'
 import { SiCplusplus, SiPostman, SiInsomnia, SiAdobexd } from 'react-icons/si'
 
+
 import { StyledGridDisplay } from '@/components/ui/grid'
-import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledParagraph } from '@/components/ui/paragraph'
 import { StyledContainer } from '@/components/ui/container'
+import { SectionHeader } from '@/components/ui/sectionHeader'
 
 import { CategoryHeadings } from './style'
 
@@ -39,7 +40,7 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
   ]
 
   const listLanguages = [
-    { name: 'HTML/CSS', icon: <><TbBrandCss3 /><TbBrandCss3 /></> },
+    { name: 'HTML/CSS', icon: <><TbBrandCss3 /><TbBrandHtml5 /></> },
     { name: 'JavaScript', icon: <TbBrandJavascript /> },
     { name: 'TypeScript', icon: <TbBrandTypescript /> },
     { name: 'PHP', icon: <FaPhp /> },
@@ -60,18 +61,6 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
     { name: 'Tableau', icon: <IoLogoTableau /> },
     { name: 'Excel', icon: <RiFileExcel2Line /> }
   ]
-
-  const listToolss = [
-    'Git(Github)',
-    'Docker',
-    'Postman',
-    'Insomnia',
-    'Android Studio',
-    'Figma',
-    'Adobe XD',
-    'Tableau',
-    'Excel'
-  ];
 
   return (
     <StyledContainer id={ id }>

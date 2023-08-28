@@ -1,11 +1,11 @@
 'use client'
 
+import Head from 'next/head';
+import styled from '@emotion/styled';
 import React, { Suspense } from 'react';
 import { Floaters } from '@/components/ui/floaters'
 import { StyledHeaderNavigation } from '@/components/ui/headNav'
 import { StyledContainer } from '@/components/ui/container'
-import styled from '@emotion/styled';
-import Head from 'next/head';
 
 const HeroSection = React.lazy( () => import( '@/components/non-reusable/landing/hero' ) );
 const AboutSection = React.lazy( () => import( '@/components/non-reusable/landing/about' ) );
