@@ -12,6 +12,31 @@ export const GridContainerStyle = styled.div`
 `;
 
 export const WordItemStyle = styled.div`
+	.container {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	&:hover {
+		.icon {
+			color: ${colors.primary};
+		}
+
+		p {
+			color: ${colors.primary};
+			border-bottom: 2px solid ${colors.primary};
+			span {
+				border-bottom: 2px solid transparent;
+			}
+		}
+	}
+
+	.icon {
+		display: flex;
+		flex-direction: row;
+	}
+
 	span {
 		color: ${colors.primary};
 	}
@@ -20,14 +45,7 @@ export const WordItemStyle = styled.div`
 		width: fit-content;
 		border-bottom: 2px solid transparent;
 		transition: all 0.2s ease-in-out;
-
-		&:hover {
-			color: ${colors.primary};
-			border-bottom: 2px solid ${colors.primary};
-			span {
-				border-bottom: 2px solid transparent;
-			}
-		}
+		padding-top: 2px;
 	}
 
 	@media (max-width: 768px) {
