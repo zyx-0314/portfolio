@@ -1,8 +1,9 @@
 import React from 'react'
-import { StyledGridDisplay } from '@/components/grid'
-import { SectionHeader } from '@/components/sectionHeader'
-import { StyledParagraph } from '@/components/paragraph'
-import { StyledContainer } from '@/components/container'
+
+import { StyledGridDisplay } from '@/components/ui/grid'
+import { SectionHeader } from '@/components/ui/sectionHeader'
+import { StyledParagraph } from '@/components/ui/paragraph'
+import { StyledContainer } from '@/components/ui/container'
 
 /**
  * Renders a section of a webpage that provides information about the author, their skills, and their aspirations.
@@ -63,10 +64,12 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
         </StyledParagraph>
         <StyledGridDisplay list={ listTechs } />
         <br />
-        <p>Languages I&apos;ve Tried</p>
+        <StyledParagraph>
+          Languages I&apos;ve Tried
+        </StyledParagraph>
         <StyledGridDisplay list={ listLanguages } />
         <br />
-        <p>Tools I&apos;ve Used</p>
+        <StyledParagraph>Tools I&apos;ve Used</StyledParagraph>
         <StyledGridDisplay list={ listTools } />
       </div>
     </StyledContainer>

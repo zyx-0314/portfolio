@@ -1,7 +1,19 @@
 import React from 'react'
-import { SectionHeader } from '@/components/sectionHeader'
-import { StyledContainer } from '@/components/container'
-import { ContentHead, CoverStyled, ProjectContainer, ProjectContent, ProjectContentContainer, ProjectNumber, TechStack, TechStackList } from './style'
+
+import
+{
+  TechStack,
+  ContentHead,
+  CoverStyled,
+  TechStackList,
+  ProjectNumber,
+  ProjectContent,
+  ProjectContainer,
+  ProjectContentContainer,
+} from './style'
+
+import { StyledContainer } from '@/components/ui/container'
+import { SectionHeader } from '@/components/ui/sectionHeader'
 
 /**
  * Renders a section displaying a list of projects with their details.

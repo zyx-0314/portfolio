@@ -1,9 +1,11 @@
 import React from 'react'
+
 import { ContactSubHeader } from './style'
-import { SectionHeader } from '@/components/sectionHeader'
-import { StyledButton } from '@/components/buttons'
-import { StyledParagraph } from '@/components/paragraph'
-import { StyledContainer } from '@/components/container'
+
+import { SectionHeader } from '@/components/ui/sectionHeader'
+import { StyledButton } from '@/components/ui/buttons'
+import { StyledParagraph } from '@/components/ui/paragraph'
+import { StyledContainer } from '@/components/ui/container'
 
 /**
  * Renders a section of a webpage that displays the contact information of the user.

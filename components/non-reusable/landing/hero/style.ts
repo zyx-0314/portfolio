@@ -47,6 +47,16 @@ export const Headers = styled.div`
 			width: 75%;
 		}
 	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		h2 {
+			font-size: 1.2rem;
+		}
+	}
 `;
 
 export const HeroTextContent = styled.div`

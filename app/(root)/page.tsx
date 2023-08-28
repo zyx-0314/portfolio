@@ -1,17 +1,17 @@
 'use client'
 
 import React, { Suspense } from 'react';
-import { Floaters } from '@/components/floaters'
-import { StyledHeaderNavigation } from '@/components/headNav'
-import { StyledContainer } from '@/components/container'
+import { Floaters } from '@/components/ui/floaters'
+import { StyledHeaderNavigation } from '@/components/ui/headNav'
+import { StyledContainer } from '@/components/ui/container'
 import styled from '@emotion/styled';
 import Head from 'next/head';
 
-const HeroSection = React.lazy( () => import( './page/hero' ) );
-const AboutSection = React.lazy( () => import( './page/about' ) );
-const ExperienceSection = React.lazy( () => import( './page/experience' ) );
-const ProjectsSection = React.lazy( () => import( './page/projects' ) );
-const ContactSection = React.lazy( () => import( './page/contact' ) );
+const HeroSection = React.lazy( () => import( '@/components/non-reusable/landing/hero' ) );
+const AboutSection = React.lazy( () => import( '@/components/non-reusable/landing/about' ) );
+const ExperienceSection = React.lazy( () => import( '@/components/non-reusable/landing/experience' ) );
+const ProjectsSection = React.lazy( () => import( '@/components/non-reusable/landing/projects' ) );
+const ContactSection = React.lazy( () => import( '@/components/non-reusable/landing/contact' ) );
 
 /**
  * Renders the home page of the website.

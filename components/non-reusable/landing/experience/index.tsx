@@ -1,9 +1,22 @@
-import React, { useReducer } from 'react';
-import { SectionHeader } from '@/components/sectionHeader'
-import { StyledContainer } from '@/components/container'
-import { ButtonProps, StyledButton } from '@/components/buttons'
 import Image from 'next/image'
-import { ExperienceContentContainer, ExperienceListContainer, ShowCardContainer, ShowCardContent, ShowCardHeaderContent, StyledShowCard, StyledShowCardHeader, StyledShowCardLogo, StyledUnorderList } from './style'
+import { useReducer } from 'react';
+
+import
+{
+  StyledShowCard,
+  ShowCardContent,
+  StyledUnorderList,
+  ShowCardContainer,
+  StyledShowCardLogo,
+  StyledShowCardHeader,
+  ShowCardHeaderContent,
+  ExperienceListContainer,
+  ExperienceContentContainer,
+} from './style'
+
+import { SectionHeader } from '@/components/ui/sectionHeader'
+import { StyledContainer } from '@/components/ui/container'
+import { ButtonProps, StyledButton } from '@/components/ui/buttons'
 
 interface ExperienceData
 {

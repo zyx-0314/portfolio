@@ -1,8 +1,10 @@
 import React from 'react'
-import { LinedButton, PopButton } from './style'
 import Link from 'next/link'
-import { saveAs } from 'file-saver';
+
+import { LinedButton, PopButton } from './style'
+
 import PropTypes from 'prop-types';
+import { saveAs } from 'file-saver';
 
 StyledButton.propTypes = {
   params: PropTypes.shape( {

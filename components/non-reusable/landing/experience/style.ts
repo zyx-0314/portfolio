@@ -1,5 +1,5 @@
-import { colors } from '@/components/variables';
 import styled from '@emotion/styled';
+import { colors } from '@/components/ui/variables';
 
 export const ExperienceContentContainer = styled.div`
 	display: flex;
@@ -98,6 +98,6 @@ export const ShowCardContent = styled.div`
 	padding: 0.5rem;
 
 	p {
-		font-size: 0.9rem;
+		font-size: 0.7rem;
 	}
 `;

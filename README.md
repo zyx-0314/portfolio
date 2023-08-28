@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/zyx-0314/">
-    <img src="./public/Images/nyebe_white.png" alt="Logo" width="120" height="100">
+    <img src="./public/static/images/nyebe_white.png" alt="Logo" width="120" height="100">
   </a>
 
   <h3 align="center">Portfolio Project</h3>
@@ -43,7 +43,7 @@
 
 ## About The Project 📝
 
-The project goal is to create a portfolio to showcase the project that I have done, my experiences and skills. The project is also a way to learn new technologies and improve my skills.
+The project is created to showcase the project that I have done, my experiences and skills. The project is also a way to learn new technologies and improve my skills.
 
 You can check the UI/UX Design in [Figma](https://www.figma.com/community/file/1268740358486001871/Portfolio-Project).
 
@@ -53,7 +53,7 @@ You can check the UI/UX Design in [Figma](https://www.figma.com/community/file/1
 
 ### Built With 🛠️
 
-[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url] [![Emotion][Emotion.com]][Emotion-url] [![FramerMotion][FramerMotion.com]][FramerMotion-url]
+[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url] [![Emotion][Emotion.com]][Emotion-url]
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
@@ -78,7 +78,7 @@ Version List.
 
 ## Road Map 📌
 
-Future Plans.
+- Add Volunteer works
 
 <br />
 
