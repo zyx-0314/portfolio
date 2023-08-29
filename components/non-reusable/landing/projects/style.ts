@@ -139,16 +139,6 @@ export const ProjectContent = styled.div`
 	height: 100%;
 	gap: 1rem;
 	justify-content: flex-end;
-
-	p {
-		font-size: 1.2rem;
-	}
-
-	@media (max-width: 1024px) {
-		p {
-			font-size: 0.8rem;
-		}
-	}
 `;
 
 export const ContentHead = styled.div`

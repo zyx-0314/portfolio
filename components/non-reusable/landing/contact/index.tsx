@@ -6,6 +6,7 @@ import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledButton } from '@/components/ui/buttons'
 import { StyledParagraph } from '@/components/ui/paragraph'
 import { StyledContainer } from '@/components/ui/container'
+import AnimationContainer from '@/components/ui/animations/page'
 
 /**
  * Renders a section of a webpage that displays the contact information of the user.
@@ -23,16 +24,20 @@ export default function ContactSection ( { id }: { id: string } ): JSX.Element
 
   return (
     <StyledContainer id={ id }>
-      <SectionHeader number=".04" title="Say Hi, If You're Interested." />
-      <ContactSubHeader>
-        <h3>{ content.title }</h3>
-        <StyledParagraph textAlignment="center">
-          { content.mainDescription }
-        </StyledParagraph>
-        <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link-InPage', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.5rem' } } } />
-        <p>{ content.subDescription }</p>
-        <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 3.5rem' } } } />
-      </ContactSubHeader>
+      <AnimationContainer animation='Slide In Right'>
+        <SectionHeader number=".04" title="Say Hi, If You're Interested." />
+      </AnimationContainer>
+      <AnimationContainer animation='Fade In Top'>
+        <ContactSubHeader>
+          <h3>{ content.title }</h3>
+          <StyledParagraph textAlignment="center">
+            { content.mainDescription }
+          </StyledParagraph>
+          <StyledButton params={ { text: 'Wanna, Say Hello?', type: 'Link-InPage', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { paddingXY: '1rem 1.5rem' } } } />
+          <p>{ content.subDescription }</p>
+          <StyledButton params={ { text: 'Resume', type: 'Download', filename: 'Ramirez_Ian_Cedric.pdf', design: 'PopUp', designControl: { paddingXY: '1rem 3.5rem' } } } />
+        </ContactSubHeader>
+      </AnimationContainer>
     </StyledContainer>
   );
 }

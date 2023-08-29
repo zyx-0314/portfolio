@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { ButtonGroupStyles, HeaderStyles, LogoStyles, MenuCloseButton, MenuContainer, NavButton } from './style';
-import { ButtonProps, StyledButton } from '../buttons';
+import { useEffect, useState } from 'react';
+import { useAnimation } from 'framer-motion';
+
+import { ButtonProps, StyledButton } from '@/components/ui/buttons';
 import { CiMenuKebab } from "react-icons/ci";
 
+import { ButtonGroupStyles, HeaderStyles, LogoStyles, MenuCloseButton, MenuContainer, NavButton } from './style';
 
 /**
  * Renders the header navigation bar of the website.
@@ -60,26 +61,29 @@ export function StyledHeaderNavigation ()
 
   // JSX element representing the header navigation bar
   return (
-    <HeaderStyles initial={ { y: 0 } } animate={ controls }>
-      <LogoStyles>
-        <Link href="/">
-          <Image alt='Nyebe Logo' src={ '/static/images/nyebe_white_cutout.png' } width={ 50 } height={ 0 } />
-        </Link>
-      </LogoStyles>
-      <ButtonGroupStyles>
-        { buttonList.map( ( button, index ) => (
-          <StyledButton
-            key={ index }
-            params={ button }
-          />
-        ) ) }
-      </ButtonGroupStyles>
-      <NavButton onClick={ () => handleMenu( true ) }>
-        <CiMenuKebab style={ { fontSize: 25 } } />
-      </NavButton>
-      <MenuContainer style={ { display: isMenuOpen ? 'flex' : 'none' } }>
+    <>
+      <HeaderStyles initial={ { y: 0 } } animate={ controls }>
+        <LogoStyles>
+          <Link href="/">
+            <Image alt='Nyebe Logo' src={ '/static/images/nyebe_white_cutout.png' } width={ 50 } height={ 0 } />
+          </Link>
+        </LogoStyles>
+        <ButtonGroupStyles>
+          { buttonList.map( ( button, index ) => (
+            <StyledButton
+              key={ index }
+              params={ button }
+            />
+          ) ) }
+        </ButtonGroupStyles>
+        <NavButton onClick={ () => handleMenu( true ) }>
+          <CiMenuKebab style={ { fontSize: 25 } } />
+        </NavButton>
+      </HeaderStyles>
+
+      <MenuContainer isOpen={ isMenuOpen }>
         <MenuCloseButton onClick={ () => handleMenu( false ) }>X</MenuCloseButton>
-        <ul>
+        <ul className='flex flex-col items-center'>
           { buttonList.map( ( button, index ) => (
             <li key={ index } onClick={ () => handleMenu( false ) }>
               <StyledButton
@@ -89,6 +93,13 @@ export function StyledHeaderNavigation ()
           ) ) }
         </ul>
       </MenuContainer>
-    </HeaderStyles>
+      {
+        isMenuOpen &&
+        <div
+          className='bg-white opacity-25  w-full h-[100vh] fixed z-50'
+          onClick={ () => handleMenu( false ) }
+        />
+      }
+    </>
   );
 }

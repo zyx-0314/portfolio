@@ -14,6 +14,7 @@ import
 
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
+import AnimationContainer from '@/components/ui/animations/page'
 
 /**
  * Renders a section displaying a list of projects with their details.
@@ -53,7 +54,7 @@ export default function ProjectsSection ( { id }: { id: string } )
     }, {
       title: 'ECommerce CMS',
       type: 'Sample Demo for Full Stack Development',
-      description: 'I\'ve developed a comprehensive e- commerce Content Management System( CMS ) sample project showcasing my prowess in Next.js.The frontend, built with Next.js, delivers a seamless user experience with dynamic product listings and an intuitive cart.Leveraging APIs, the frontend communicates flawlessly with the backend, which I\'ve developed using Node.js. The backend manages product data, user authentication, and order processing, ensuring security and reliability. This project exemplifies my expertise in full-stack development, API integration, and creating dynamic, efficient e-commerce platforms.',
+      description: 'I\'ve crafted a Next.js E-Commerce CMS demo highlighting my full-stack skills.The frontend offers dynamic product listings, a smooth cart experience, synced perfectly with the Node.js backend. Expertise in APIs, security, and efficiency showcased.',
       image: 'Ecommerce_CMS.png',
       link: '',
       techs: [
@@ -64,7 +65,19 @@ export default function ProjectsSection ( { id }: { id: string } )
         'Stripe - Clerk'
       ],
       schema: 'MobileApplication'
-    }
+    }, {
+      title: 'ECommerce',
+      type: 'Sample Demo for Full Stack Development',
+      description: 'I\'ve created an E-Commerce store using Next.js.The frontend boasts dynamic product listings, an intuitive cart, and seamless API integration. Backed by a secure Node.js backend, it showcases my prowess in full - stack development for efficient and dynamic online shopping platforms.',
+      image: 'Ecommerce.png',
+      link: '',
+      techs: [
+        'NextJS',
+        'Tailwind CSS',
+        'Stripe'
+      ],
+      schema: 'MobileApplication'
+    },
   ]
 
   /**
@@ -80,28 +93,32 @@ export default function ProjectsSection ( { id }: { id: string } )
 
   return (
     <StyledContainer id={ id }>
-      <SectionHeader number='.03' title='Some of my Works.' />
+      <AnimationContainer animation='Slide In Right'>
+        <SectionHeader number='.03' title='Some of my Works.' />
+      </AnimationContainer>
       { projectList.map( ( project, index ) => (
-        <ProjectContainer value={ index } key={ index } itemScope itemType={ `https://schema.org/${ project.schema }` }>
-          {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
-          <ProjectContentContainer image={ `/static/projects/${ project.image }` } itemProp='image'>
-            <CoverStyled id='cover'>
-              <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
-              <ProjectContent id='content'>
-                <ContentHead>
-                  <h3 itemProp='applicationCategory'>{ project.type }</h3>
-                  <h2 itemProp='name'>{ project.title }</h2>
-                </ContentHead>
-                <p id='hidden' itemProp='about'>{ project.description }</p>
-                <TechStackList id='hidden'>
-                  { project.techs.map( ( tech, index ) => (
-                    <TechStack key={ index }>{ tech }</TechStack>
-                  ) ) }
-                </TechStackList>
-              </ProjectContent>
-            </CoverStyled>
-          </ProjectContentContainer>
-        </ProjectContainer>
+        <AnimationContainer animation={ index % 2 ? 'Slide In Right' : 'Slide In Left' } key={ index }>
+          <ProjectContainer value={ index } itemScope itemType={ `https://schema.org/${ project.schema }` }>
+            {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
+            <ProjectContentContainer image={ `/static/projects/${ project.image }` } itemProp='image'>
+              <CoverStyled id='cover'>
+                <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
+                <ProjectContent id='content'>
+                  <ContentHead>
+                    <h3 itemProp='applicationCategory'>{ project.type }</h3>
+                    <h2 itemProp='name'>{ project.title }</h2>
+                  </ContentHead>
+                  <p id='hidden' itemProp='about'>{ project.description }</p>
+                  <TechStackList id='hidden'>
+                    { project.techs.map( ( tech, index ) => (
+                      <TechStack key={ index }>{ tech }</TechStack>
+                    ) ) }
+                  </TechStackList>
+                </ProjectContent>
+              </CoverStyled>
+            </ProjectContentContainer>
+          </ProjectContainer>
+        </AnimationContainer>
       ) ) }
     </StyledContainer>
   )
