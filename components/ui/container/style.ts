@@ -29,7 +29,7 @@ export const HeroStyledSectionContainer = styled.section`
 
 	@media (max-width: 1480px) {
 		gap: 3rem;
-		padding-top: 4rem;
+		padding-top: 2rem;
 		height: fit-content;
 		min-height: 85vh;
 		width: 90%;
@@ -37,11 +37,17 @@ export const HeroStyledSectionContainer = styled.section`
 	}
 
 	@media (max-width: 768px) {
-		padding-top: 2rem;
+		padding-top: 5rem;
 		width: 100%;
 		height: fit-content;
+		min-height: 75vh;
 		display: flex;
 		flex-direction: column-reverse;
+	}
+
+	@media (max-width: 480px) {
+		padding-top: 6rem;
+		width: 95%;
 	}
 `;
 
@@ -61,6 +67,6 @@ export const StyledMainContainer = styled.main`
 
 	@media (max-width: 768px) {
 		padding: 0 1rem;
-		width: 100%;
+		width: 95%;
 	}
 `;

@@ -66,13 +66,25 @@ export function StyledButton ( { params: { text, design, type, onClick, href, fi
   {
     case 'Link-NewTab':
       return (
-        <Link href={ href ? href : '/construction' } target='_blank' rel='noopener noreferrer' title={ text } className='w-fit'>
+        <Link
+          href={ href ? href : '/construction' }
+          target='_blank'
+          rel='noopener noreferrer'
+          title={ text }
+          className='w-fit'
+          onClick={ () => { console.log( 'Link-NewTab' ) } }
+        >
           { getStyleSelected( design, text, () => { }, designControl ) }
-        </Link>
+        </Link >
       )
     case 'Link-InPage':
       return (
-        <Link href={ href ? href : '/construction' } title={ text } className='w-fit'>
+        <Link
+          href={ href ? href : '/construction' }
+          title={ text }
+          className='w-fit'
+          onClick={ () => { console.log( 'Link-NewTab' ) } }
+        >
           { getStyleSelected( design, text, () => { }, designControl ) }
         </Link>
       )

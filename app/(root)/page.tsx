@@ -15,7 +15,7 @@ const ContactSection = React.lazy( () => import( '@/components/non-reusable/land
 
 /**
  * Renders the home page of the website.
- * 
+ *
  * @returns The main layout of the home page, including the header, footer, and main content.
  */
 export default function Home ()

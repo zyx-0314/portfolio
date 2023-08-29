@@ -12,6 +12,8 @@ export const GridContainerStyle = styled.div`
 `;
 
 export const WordItemStyle = styled.div`
+	width: fit-content;
+
 	.container {
 		display: flex;
 		align-items: center;

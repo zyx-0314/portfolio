@@ -70,7 +70,7 @@ export const PopButton = styled.div<Props>`
 	&:hover {
 		color: ${colors.primary};
 		transform: translate(-4px, -4px);
-		box-shadow: 4px 4px ${colors.primary};
+		box-shadow: 2px 2px ${colors.primary}, 4px 4px ${colors.fadedPrimary};
 	}
 
 	@media (max-width: 768px) {

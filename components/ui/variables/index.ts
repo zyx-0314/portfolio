@@ -30,6 +30,7 @@ function getColors() {
 	return {
 		primary: '#78FF8F',
 		lightPrimary: '#b1fabdff',
+		fadedPrimary: '#78ff8f52',
 		darkPrimary: '#1a73e8',
 
 		secondary: '#3c4043',
