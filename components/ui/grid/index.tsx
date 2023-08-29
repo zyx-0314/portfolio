@@ -26,8 +26,8 @@ export function StyledGridDisplay ( { list }: GridProps ): JSX.Element
       { list.map( ( { name, icon }, index ) => (
         <AnimationContainer
           animation='Fade In Top'
-          scale={ 1.5 }
-          duration={ 0.15 * ( index + 1 ) }
+          scale={ 1.3 }
+          duration={ 0.3 * ( index + 1 ) }
           key={ index }
         >
           <WordItemStyle key={ index } className='grid-item'>

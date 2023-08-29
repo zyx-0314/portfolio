@@ -21,32 +21,32 @@ const AnimationContainer = ( { children, animation, scale = 1.1, duration = 0.5,
 
   const fadeInBottomInRange = {
     visible: { opacity: 1, scale: 1, transition: { duration: duration } },
-    hidden: { opacity: 0, scale: 0 }
+    hidden: { opacity: 0, scale: 0, transition: { duration: duration } }
   };
 
   const fadeInTopInRange = {
     visible: { opacity: 1, scale: 1, transition: { duration: duration } },
-    hidden: { opacity: 0, scale: scale }
+    hidden: { opacity: 0, scale: scale, transition: { duration: duration } }
   };
 
   const slideInLeft = {
     visible: { opacity: 1, x: 0, transition: { duration: duration } },
-    hidden: { opacity: 0, x: initialX * -1 }
+    hidden: { opacity: 0, x: initialX * -1, transition: { duration: duration } }
   }
 
   const slideInRight = {
     visible: { opacity: 1, x: 0, transition: { duration: duration } },
-    hidden: { opacity: 0, x: initialX }
+    hidden: { opacity: 0, x: initialX, transition: { duration: duration } }
   }
 
   const slideInTop = {
     visible: { opacity: 1, y: 0, transition: { duration: duration } },
-    hidden: { opacity: 0, y: initialY }
+    hidden: { opacity: 0, y: initialY, transition: { duration: duration } }
   }
 
   const slideInBottom = {
     visible: { opacity: 1, y: 0, transition: { duration: duration } },
-    hidden: { opacity: 0, y: initialY * -1 }
+    hidden: { opacity: 0, y: initialY * -1, transition: { duration: duration } }
   }
 
   const animationVariants = [
