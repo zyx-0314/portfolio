@@ -1,6 +1,7 @@
 import React from 'react'
 import { GridContainerStyle, WordItemStyle } from './style'
 import PropTypes from 'prop-types';
+import AnimationContainer from '../animations/page';
 
 StyledGridDisplay.propTypes = {
   list: PropTypes.array.isRequired,
@@ -23,14 +24,21 @@ export function StyledGridDisplay ( { list }: GridProps ): JSX.Element
   return (
     <GridContainerStyle>
       { list.map( ( { name, icon }, index ) => (
-        <WordItemStyle key={ index } className='grid-item'>
-          <div className='container'>
-            <div className='icon'>
-              { icon }
+        <AnimationContainer
+          animation='Fade In Top'
+          scale={ 1.3 }
+          duration={ 0.3 * ( index + 1 ) }
+          key={ index }
+        >
+          <WordItemStyle key={ index } className='grid-item'>
+            <div className='container'>
+              <div className='icon'>
+                { icon }
+              </div>
+              <p> { name } </p>
             </div>
-            <p> { name } </p>
-          </div>
-        </WordItemStyle>
+          </WordItemStyle>
+        </AnimationContainer>
       ) ) }
     </GridContainerStyle>
   );

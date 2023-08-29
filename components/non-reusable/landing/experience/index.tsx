@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import
 {
@@ -17,6 +19,8 @@ import
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledContainer } from '@/components/ui/container'
 import { ButtonProps, StyledButton } from '@/components/ui/buttons'
+import AnimationContainer from '@/components/ui/animations/page';
+
 
 interface ExperienceData
 {
@@ -37,6 +41,7 @@ interface ExperienceData
 export default function ExperienceSection ( { id }: { id: string } )
 {
   const initialState = { selected: 0 };
+
 
   function reducer ( state: any, action: any )
   {
@@ -78,7 +83,9 @@ export default function ExperienceSection ( { id }: { id: string } )
     type: 'Action',
     designControl: { paddingXY: '.5rem 2.5rem', width: '100%' },
   };
+
   const design = [ '<h1>', '</h1 >' ];
+
   const companyLink: ButtonProps = {
     text: companyListData[ state.selected ].email,
     href: `${ companyListData[ state.selected ].email }`,
@@ -93,53 +100,55 @@ export default function ExperienceSection ( { id }: { id: string } )
   }
 
   return (
-    <StyledContainer id={ id }>
-      <SectionHeader number=".02" title="Where I've Been So Far?." />
-      <ExperienceContentContainer>
-        <ExperienceListContainer>
-          <StyledUnorderList>
-            { companyListData.map( ( company, index ) => (
-              <li key={ `${ company.name }-${ index }` }>
-                <StyledButton
-                  params={ {
-                    ...selectionParams,
-                    text: company.name,
-                    onClick: () => handleSelected( index ),
-                  } }
-                />
-              </li>
-            ) ) }
-          </StyledUnorderList>
-        </ExperienceListContainer>
-        <ShowCardContainer>
-          <StyledShowCard>
-            <StyledShowCardHeader>
-              <StyledShowCardLogo>
-                <Image
-                  src={ companyListData[ state.selected ].logo }
-                  width={ 150 }
-                  height={ 0 }
-                  alt={ companyListData[ state.selected ].name }
-                />
-              </StyledShowCardLogo>
-              <ShowCardHeaderContent>
-                <h2>{ companyListData[ state.selected ].name }</h2>
-                <h3>{ companyListData[ state.selected ].description }</h3>
-                <div>
-                  <StyledButton params={ companyLink } />
-                </div>
-              </ShowCardHeaderContent>
-            </StyledShowCardHeader>
-            <ShowCardContent>
-              <p>{ design[ 0 ] }</p>
-              { companyListData[ state.selected ].content.map( ( content, index ) => (
-                <p key={ index }>&emsp;|&emsp;{ content }</p>
+    <AnimationContainer animation='Fade In Top'>
+      <StyledContainer id={ id }>
+        <SectionHeader number=".02" title="Where I've Been So Far?." />
+        <ExperienceContentContainer>
+          <ExperienceListContainer>
+            <StyledUnorderList>
+              { companyListData.map( ( company, index ) => (
+                <li key={ `${ company.name }-${ index }` }>
+                  <StyledButton
+                    params={ {
+                      ...selectionParams,
+                      text: company.name,
+                      onClick: () => handleSelected( index ),
+                    } }
+                  />
+                </li>
               ) ) }
-              <p>{ design[ 1 ] }</p>
-            </ShowCardContent>
-          </StyledShowCard>
-        </ShowCardContainer>
-      </ExperienceContentContainer>
-    </StyledContainer>
+            </StyledUnorderList>
+          </ExperienceListContainer>
+          <ShowCardContainer>
+            <StyledShowCard>
+              <StyledShowCardHeader>
+                <StyledShowCardLogo>
+                  <Image
+                    src={ companyListData[ state.selected ].logo }
+                    width={ 150 }
+                    height={ 0 }
+                    alt={ companyListData[ state.selected ].name }
+                  />
+                </StyledShowCardLogo>
+                <ShowCardHeaderContent>
+                  <h2>{ companyListData[ state.selected ].name }</h2>
+                  <h3>{ companyListData[ state.selected ].description }</h3>
+                  <div>
+                    <StyledButton params={ companyLink } />
+                  </div>
+                </ShowCardHeaderContent>
+              </StyledShowCardHeader>
+              <ShowCardContent>
+                <p>{ design[ 0 ] }</p>
+                { companyListData[ state.selected ].content.map( ( content, index ) => (
+                  <p key={ index }>&emsp;|&emsp;{ content }</p>
+                ) ) }
+                <p>{ design[ 1 ] }</p>
+              </ShowCardContent>
+            </StyledShowCard>
+          </ShowCardContainer>
+        </ExperienceContentContainer>
+      </StyledContainer>
+    </AnimationContainer>
   );
 }
