@@ -82,6 +82,7 @@ export default function RootLayout ( {
           ` }
         </Script>
         <link rel="icon" href="favicon.ico" type='image/x-icon' />
+        <meta name="google-site-verification" content="45zB7vn-RNN5_tVKbrmX3ype7AiqKp52U7UOU5XkZZw" />
       </head>
       <body className={ `${ poppins.className } bg-slate-900` }>{ children }</body>
     </html>

@@ -15,6 +15,7 @@ import
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page'
+import Image from 'next/image'
 
 /**
  * Renders a section displaying a list of projects with their details.
@@ -30,7 +31,7 @@ export default function ProjectsSection ( { id }: { id: string } )
       title: 'SIMS - Student Information Management System',
       type: 'Web Application',
       description: 'A web-based application that manages the student information of a school. It has a feature that can generate a report of the student information.',
-      image: 'SIMS.png',
+      image: 'SIMS.webp',
       link: '',
       techs: [
         'PHP',
@@ -42,7 +43,7 @@ export default function ProjectsSection ( { id }: { id: string } )
       title: 'Path Utility Guide System',
       type: 'Android Application - Experimental (Research)',
       description: 'An android application that can guide the user in their path by using Neural Networks Algorithms inbeded in the Application. It has a feature that can detect the objects spatial location, approximate distance, Danger Guage and Object Class by using Neural Networks Algorithms inbeded in the Application.',
-      image: 'PUGS.png',
+      image: 'PUGS.webp',
       link: '',
       techs: [
         'Kotlin',
@@ -55,7 +56,7 @@ export default function ProjectsSection ( { id }: { id: string } )
       title: 'ECommerce CMS',
       type: 'Sample Demo for Full Stack Development',
       description: 'I\'ve crafted a Next.js E-Commerce CMS demo highlighting my full-stack skills.The frontend offers dynamic product listings, a smooth cart experience, synced perfectly with the Node.js backend. Expertise in APIs, security, and efficiency showcased.',
-      image: 'Ecommerce_CMS.png',
+      image: 'Ecommerce_CMS.webp',
       link: '',
       techs: [
         'NextJS',
@@ -69,7 +70,7 @@ export default function ProjectsSection ( { id }: { id: string } )
       title: 'ECommerce',
       type: 'Sample Demo for Full Stack Development',
       description: 'I\'ve created an E-Commerce store using Next.js.The frontend boasts dynamic product listings, an intuitive cart, and seamless API integration. Backed by a secure Node.js backend, it showcases my prowess in full - stack development for efficient and dynamic online shopping platforms.',
-      image: 'Ecommerce.png',
+      image: 'Ecommerce.webp',
       link: '',
       techs: [
         'NextJS',
@@ -100,7 +101,14 @@ export default function ProjectsSection ( { id }: { id: string } )
         <AnimationContainer animation={ index % 2 ? 'Slide In Right' : 'Slide In Left' } key={ index }>
           <ProjectContainer value={ index } itemScope itemType={ `https://schema.org/${ project.schema }` }>
             {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
-            <ProjectContentContainer image={ `/static/projects/${ project.image }` } itemProp='image'>
+            <ProjectContentContainer itemProp='image'>
+              <Image
+                alt={ project.title }
+                src={ `/static/projects/${ project.image }` }
+                layout='fill'
+                loading="lazy"
+                className='object-center object-coverw'
+              />
               <CoverStyled id='cover'>
                 <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>
                 <ProjectContent id='content'>

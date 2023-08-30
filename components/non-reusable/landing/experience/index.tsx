@@ -59,7 +59,7 @@ export default function ExperienceSection ( { id }: { id: string } )
   const companyListData: ExperienceData[] = [
     {
       name: 'Argon Software',
-      logo: '/static/companies/Argon_Software.png',
+      logo: '/static/companies/Argon_Software.webp',
       description: 'Software Service Provider',
       email: 'https://argonsoftware.info/',
       content: [
@@ -100,7 +100,7 @@ export default function ExperienceSection ( { id }: { id: string } )
   }
 
   return (
-    <AnimationContainer animation='Fade In Top'>
+    <AnimationContainer animation='Fade In Top' duration={ 1 }>
       <StyledContainer id={ id }>
         <SectionHeader number=".02" title="Where I've Been So Far?." />
         <ExperienceContentContainer>

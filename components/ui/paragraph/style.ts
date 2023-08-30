@@ -21,6 +21,6 @@ export const ContentBody = styled.p<ParagraphContainerProps>`
 	}
 
 	@media (max-width: 768px) {
-		font-size: 0.7rem;
+		font-size: 0.75rem;
 	}
 `;

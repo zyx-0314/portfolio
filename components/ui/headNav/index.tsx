@@ -65,7 +65,7 @@ export function StyledHeaderNavigation ()
       <HeaderStyles initial={ { y: 0 } } animate={ controls }>
         <LogoStyles>
           <Link href="/">
-            <Image alt='Nyebe Logo' src={ '/static/images/nyebe_white_cutout.png' } width={ 50 } height={ 0 } />
+            <Image alt='Nyebe Logo' src={ '/static/images/nyebe_white_cutout.webp' } width={ 50 } height={ 0 } />
           </Link>
         </LogoStyles>
         <ButtonGroupStyles>
