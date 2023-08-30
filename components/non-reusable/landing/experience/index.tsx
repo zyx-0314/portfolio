@@ -126,6 +126,7 @@ export default function ExperienceSection ( { id }: { id: string } )
                     width={ 150 }
                     height={ 0 }
                     alt={ companyListData[ state.selected ].name }
+                    className='aspect-video'
                   />
                 </StyledShowCardLogo>
                 <ShowCardHeaderContent>
