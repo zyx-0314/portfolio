@@ -7,14 +7,12 @@ export const ProjectContainer = styled.div<{ value: number }>`
 		value % 2 ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
 `;
 
-export const ProjectContentContainer = styled.div<{ image?: string }>`
+export const ProjectContentContainer = styled.div`
 	border: 2px solid ${colors.white};
 	border-radius: 5px;
 	width: 85%;
-	background-image: ${({ image }) => (image ? `url(${image})` : 'none')};
-	background-size: cover;
-	min-height: 300px;
 	transition: all ease-in-out 0.15s;
+	position: relative;
 
 	p {
 		font-size: 0.9rem;
@@ -76,12 +74,11 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 
 	@media (max-width: 768px) {
 		p {
-			font-size: 0.9rem;
+			font-size: 0.75rem;
 		}
 
 		#number {
 			opacity: 1;
-			font-size: 5rem;
 			bottom: 1.5rem;
 		}
 
@@ -104,32 +101,35 @@ export const ProjectContentContainer = styled.div<{ image?: string }>`
 			}
 		}
 	}
-
-	@media (max-width: 425px) {
-		p {
-			font-size: 0.7rem;
-		}
-
-		#number {
-			font-size: 3rem;
-		}
-	}
 `;
 
 export const CoverStyled = styled.div`
 	width: 100%;
-	height: 100%;
+	height: fit-content;
 	border-radius: 5px;
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: space-between;
 	padding: 1rem;
+	position: relative;
 `;
 
 export const ProjectNumber = styled.span`
 	font-size: 10rem;
 	font-weight: 700;
 	letter-spacing: 0.2rem;
+
+	@media (max-width: 1024px) {
+		font-size: 8rem;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 6rem;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 4rem;
+	}
 `;
 
 export const ProjectContent = styled.div`
@@ -165,13 +165,13 @@ export const ContentHead = styled.div`
 		}
 
 		h3 {
-			font-size: 0.8rem;
+			font-size: 0.85rem;
 		}
 	}
 
 	@media (max-width: 768px) {
 		h2 {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			line-height: 1.5rem;
 		}
 
@@ -182,12 +182,11 @@ export const ContentHead = styled.div`
 
 	@media (max-width: 425px) {
 		h2 {
-			font-size: 1.2rem;
-			line-height: 1.5rem;
+			font-size: 1rem;
 		}
 
 		h3 {
-			font-size: 0.6rem;
+			font-size: 0.75rem;
 		}
 	}
 `;

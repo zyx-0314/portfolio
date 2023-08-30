@@ -1,24 +1,23 @@
 import React from 'react'
 import { GrMysql } from 'react-icons/gr'
 import { VscGithub } from 'react-icons/vsc'
-import { TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb'
 import { IoLogoTableau } from 'react-icons/io5'
 import { AiOutlineAndroid } from 'react-icons/ai'
 import { BiLogoTailwindCss } from 'react-icons/bi'
 import { RiBootstrapLine, RiFileExcel2Line } from 'react-icons/ri'
-import { TbBrandJavascript, TbBrandTypescript } from 'react-icons/tb'
 import { FaLaravel, FaReact, FaSass, FaPhp, FaFigma } from 'react-icons/fa'
 import { TbBrandPython, TbBrandKotlin, TbBrandDocker } from 'react-icons/tb'
 import { SiCplusplus, SiPostman, SiInsomnia, SiAdobexd } from 'react-icons/si'
+import { TbBrandJavascript, TbBrandTypescript, TbBrandCss3, TbBrandHtml5 } from 'react-icons/tb'
 
 
 import { StyledGridDisplay } from '@/components/ui/grid'
 import { StyledParagraph } from '@/components/ui/paragraph'
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
+import AnimationContainer from '@/components/ui/animations/page'
 
 import { CategoryHeadings } from './style'
-import AnimationContainer from '@/components/ui/animations/page'
 
 /**
  * Renders a section of a webpage that provides information about the author, their skills, and their aspirations.

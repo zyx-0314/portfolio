@@ -1,6 +1,7 @@
 import React from 'react'
-import { ContentBody } from './style'
 import PropTypes from 'prop-types';
+
+import { ContentBody } from './style'
 
 StyledParagraph.propTypes = {
   children: PropTypes.node.isRequired,

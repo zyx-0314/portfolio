@@ -1,6 +1,7 @@
 import React from 'react'
-import { StyledProfile } from './style'
 import Image from 'next/image'
+
+import { StyledProfile } from './style'
 
 /**
  * Renders a profile image with a cover effect and four rectangular borders.
@@ -18,7 +19,13 @@ export function Profile ()
           <div className="rectangle-3" />
           <div className="rectangle-4" />
           <div className="image">
-            <Image src='/static/images/Graduation-Profile-Pic.jpg' alt='Ian Cedric Ramirez' fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+            <Image
+              src='/static/images/Graduation-Profile-Pic.webp'
+              alt='Ian Cedric Ramirez'
+              fill
+              loading="lazy"
+              className='object-cover aspect-square'
+            />
           </div>
         </div>
       </div>

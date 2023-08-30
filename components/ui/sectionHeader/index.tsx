@@ -1,6 +1,7 @@
 import React from 'react'
-import { SectionHeaderStyles, SectionHeaderNumberStyles, SectionHeaderTitleStyles } from './style'
 import PropTypes from 'prop-types';
+
+import { SectionHeaderStyles, SectionHeaderNumberStyles, SectionHeaderTitleStyles } from './style'
 
 SectionHeader.propTypes = {
   number: PropTypes.string.isRequired,
