@@ -115,9 +115,21 @@ export const CoverStyled = styled.div`
 `;
 
 export const ProjectNumber = styled.span`
-	font-size: 3rem;
+	font-size: 10rem;
 	font-weight: 700;
 	letter-spacing: 0.2rem;
+
+	@media (max-width: 1024px) {
+		font-size: 8rem;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 6rem;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 4rem;
+	}
 `;
 
 export const ProjectContent = styled.div`

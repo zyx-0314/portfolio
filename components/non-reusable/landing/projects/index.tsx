@@ -107,7 +107,7 @@ export default function ProjectsSection ( { id }: { id: string } )
                 src={ `/static/projects/${ project.image }` }
                 layout='fill'
                 loading="lazy"
-                className='object-center object-coverw'
+                className='object-cover aspect-video'
               />
               <CoverStyled id='cover'>
                 <ProjectNumber id='number'>{ formatProjectNumber( index ) }</ProjectNumber>

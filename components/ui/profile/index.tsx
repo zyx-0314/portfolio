@@ -23,7 +23,7 @@ export function Profile ()
               alt='Ian Cedric Ramirez'
               fill
               loading="lazy"
-              className='object-cover'
+              className='object-cover aspect-square'
             />
           </div>
         </div>
