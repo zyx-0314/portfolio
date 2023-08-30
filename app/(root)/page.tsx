@@ -5,14 +5,16 @@ import styled from '@emotion/styled';
 import React, { Suspense } from 'react';
 
 import { Floaters } from '@/components/ui/floaters'
+import { ButtonProps } from '@/components/ui/buttons';
 import { StyledContainer } from '@/components/ui/container'
 import { StyledHeaderNavigation } from '@/components/ui/headNav'
 
-const HeroSection = React.lazy( () => import( '@/components/non-reusable/landing/hero' ) );
-const AboutSection = React.lazy( () => import( '@/components/non-reusable/landing/about' ) );
-const ContactSection = React.lazy( () => import( '@/components/non-reusable/landing/contact' ) );
-const ProjectsSection = React.lazy( () => import( '@/components/non-reusable/landing/projects' ) );
-const ExperienceSection = React.lazy( () => import( '@/components/non-reusable/landing/experience' ) );
+import HeroSection from '@/components/sections/landing/hero'
+import AboutSection from '@/components/sections/landing/about'
+import ContactSection from '@/components/sections/landing/contact'
+import ProjectsSection from '@/components/sections/landing/projects'
+import ExperienceSection from '@/components/sections/landing/experience'
+
 
 /**
  * Renders the home page of the website.
@@ -21,23 +23,33 @@ const ExperienceSection = React.lazy( () => import( '@/components/non-reusable/l
  */
 export default function Home ()
 {
-  function addProductJsonLd ()
+  const addProductJsonLd = () =>
   {
     return {
       __html: `{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "name": "Ian Ramirez",
-  "jobTitle": "Software Engineer",
-  "url": "https://ian-cedric-ramirez.vercel.app/",
-  "description": "Passionate software engineer with expertise in crafting innovative solutions.",
-  "sameAs": [
-    "https://www.linkedin.com/in/ian-cedric-ramirez/",
-    "https://github.com/zyx-0314"
-  ]
-}`
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Ian Ramirez",
+        "jobTitle": "Software Engineer",
+        "url": "https://ian-cedric-ramirez.vercel.app/",
+        "description": "Passionate software engineer with expertise in crafting innovative solutions.",
+        "sameAs": [
+          "https://www.linkedin.com/in/ian-cedric-ramirez/",
+          "https://github.com/zyx-0314"
+        ]
+      }`
     }
   }
+
+  // Array of button objects for navigation buttons
+  const buttonList: ButtonProps[] = [
+    { text: 'About', href: '#about', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Experience', href: '#experience', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Projects', href: '#projects', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Contact', href: '#contact', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'Download', design: 'PopUp' }
+  ];
+
   return (
     <>
       <Head>
@@ -48,7 +60,7 @@ export default function Home ()
         />
       </Head>
       <Floaters />
-      <StyledHeaderNavigation />
+      <StyledHeaderNavigation buttonList={ buttonList } />
       <Container>
         <StyledContainer specialType='Main' className="items-center">
           <Suspense fallback={ <div>Loading....</div> }>

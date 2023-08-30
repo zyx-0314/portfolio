@@ -5,24 +5,17 @@ import { useAnimation } from 'framer-motion';
 import { CiMenuKebab } from "react-icons/ci";
 
 import { ButtonProps, StyledButton } from '@/components/ui/buttons';
+import MobileNav from '@/components/ui/mobileNav';
 
-import { ButtonGroupStyles, HeaderStyles, LogoStyles, MenuCloseButton, MenuContainer, NavButton } from './style';
+import { ButtonGroupStyles, HeaderStyles, LogoStyles, NavButton } from './style';
 
 /**
  * Renders the header navigation bar of the website.
  * 
  * @returns JSX element representing the header navigation bar.
  */
-export function StyledHeaderNavigation ()
+export function StyledHeaderNavigation ( { buttonList }: { buttonList: ButtonProps[] } )
 {
-  // Array of button objects for navigation buttons
-  const buttonList: ButtonProps[] = [
-    { text: 'About', href: '#about', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Experience', href: '#experience', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Projects', href: '#projects', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Contact', href: '#contact', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'Download', design: 'PopUp' }
-  ];
 
   // State and controls for mobile menu button and header animation
   const [ isMenuOpen, setIsMenuOpen ] = useState( false );
@@ -81,24 +74,14 @@ export function StyledHeaderNavigation ()
         </NavButton>
       </HeaderStyles>
 
-      <MenuContainer isOpen={ isMenuOpen }>
-        <MenuCloseButton onClick={ () => handleMenu( false ) }>X</MenuCloseButton>
-        <ul className='flex flex-col items-center'>
-          { buttonList.map( ( button, index ) => (
-            <li key={ index } onClick={ () => handleMenu( false ) }>
-              <StyledButton
-                params={ button }
-              />
-            </li>
-          ) ) }
-        </ul>
-      </MenuContainer>
       {
         isMenuOpen &&
-        <div
-          className='bg-white opacity-25  w-full h-[100vh] fixed z-50'
-          onClick={ () => handleMenu( false ) }
+        <MobileNav
+          buttonList={ buttonList }
+          isMenuOpen={ isMenuOpen }
+          handleMenu={ handleMenu }
         />
+
       }
     </>
   );
