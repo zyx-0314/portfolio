@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import { useReducer, useEffect } from 'react';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useReducer } from 'react';
 
 import
 {
@@ -16,10 +14,10 @@ import
   ExperienceContentContainer,
 } from './style'
 
-import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledContainer } from '@/components/ui/container'
-import { ButtonProps, StyledButton } from '@/components/ui/buttons'
+import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page';
+import { ButtonProps, StyledButton } from '@/components/ui/buttons'
 
 
 interface ExperienceData

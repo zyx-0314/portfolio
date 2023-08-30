@@ -1,6 +1,7 @@
 import React from 'react'
-import { StyledProfile } from './style'
 import Image from 'next/image'
+
+import { StyledProfile } from './style'
 
 /**
  * Renders a profile image with a cover effect and four rectangular borders.

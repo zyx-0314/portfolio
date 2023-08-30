@@ -1,9 +1,10 @@
 import React from 'react'
-import { FloaterBorder, FloaterContainer, PopupIcon } from './style'
-import { VscGithub } from "react-icons/vsc";
-import { AiOutlineLinkedin } from "react-icons/ai";
 import { FiMail } from "react-icons/fi";
 import { FaFigma } from "react-icons/fa";
+import { VscGithub } from "react-icons/vsc";
+import { AiOutlineLinkedin } from "react-icons/ai";
+
+import { FloaterBorder, FloaterContainer, PopupIcon } from './style'
 
 /**
  * Renders a fixed-positioned bar at the bottom of a webpage, containing links to the developer's social media accounts and email address.

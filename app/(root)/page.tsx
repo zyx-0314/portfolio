@@ -3,15 +3,16 @@
 import Head from 'next/head';
 import styled from '@emotion/styled';
 import React, { Suspense } from 'react';
+
 import { Floaters } from '@/components/ui/floaters'
-import { StyledHeaderNavigation } from '@/components/ui/headNav'
 import { StyledContainer } from '@/components/ui/container'
+import { StyledHeaderNavigation } from '@/components/ui/headNav'
 
 const HeroSection = React.lazy( () => import( '@/components/non-reusable/landing/hero' ) );
 const AboutSection = React.lazy( () => import( '@/components/non-reusable/landing/about' ) );
-const ExperienceSection = React.lazy( () => import( '@/components/non-reusable/landing/experience' ) );
-const ProjectsSection = React.lazy( () => import( '@/components/non-reusable/landing/projects' ) );
 const ContactSection = React.lazy( () => import( '@/components/non-reusable/landing/contact' ) );
+const ProjectsSection = React.lazy( () => import( '@/components/non-reusable/landing/projects' ) );
+const ExperienceSection = React.lazy( () => import( '@/components/non-reusable/landing/experience' ) );
 
 /**
  * Renders the home page of the website.

@@ -1,7 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { GridContainerStyle, WordItemStyle } from './style'
-import PropTypes from 'prop-types';
-import AnimationContainer from '../animations/page';
+  ;
+import AnimationContainer from '@/components/ui/animations/page';
 
 StyledGridDisplay.propTypes = {
   list: PropTypes.array.isRequired,

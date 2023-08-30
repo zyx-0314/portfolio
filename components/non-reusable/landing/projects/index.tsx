@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 import
 {
@@ -15,7 +16,6 @@ import
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page'
-import Image from 'next/image'
 
 /**
  * Renders a section displaying a list of projects with their details.

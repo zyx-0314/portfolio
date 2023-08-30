@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useAnimation } from 'framer-motion';
+import { CiMenuKebab } from "react-icons/ci";
 
 import { ButtonProps, StyledButton } from '@/components/ui/buttons';
-import { CiMenuKebab } from "react-icons/ci";
 
 import { ButtonGroupStyles, HeaderStyles, LogoStyles, MenuCloseButton, MenuContainer, NavButton } from './style';
 
