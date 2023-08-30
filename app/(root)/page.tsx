@@ -71,7 +71,7 @@ export default function Home ()
             <ContactSection id='contact' />
           </Suspense>
         </StyledContainer>
-        <footer className='flex w-full justify-center pt-5 mt-5 text-xs pb-3'>Nyebe Creations - { new Date().getFullYear() } - v.1.0.6</footer>
+        <footer className='flex w-full justify-center pt-5 mt-5 text-xs pb-3'>Nyebe Creations - { new Date().getFullYear() } - v.1.0.8</footer>
       </Container>
     </>
   );
