@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import { useReducer, useEffect } from 'react';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useReducer } from 'react';
 
 import
 {
@@ -16,10 +14,10 @@ import
   ExperienceContentContainer,
 } from './style'
 
-import { SectionHeader } from '@/components/ui/sectionHeader'
 import { StyledContainer } from '@/components/ui/container'
-import { ButtonProps, StyledButton } from '@/components/ui/buttons'
+import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page';
+import { ButtonProps, StyledButton } from '@/components/ui/buttons'
 
 
 interface ExperienceData
@@ -59,7 +57,7 @@ export default function ExperienceSection ( { id }: { id: string } )
   const companyListData: ExperienceData[] = [
     {
       name: 'Argon Software',
-      logo: '/static/companies/Argon_Software.png',
+      logo: '/static/companies/Argon_Software.webp',
       description: 'Software Service Provider',
       email: 'https://argonsoftware.info/',
       content: [
@@ -100,7 +98,7 @@ export default function ExperienceSection ( { id }: { id: string } )
   }
 
   return (
-    <AnimationContainer animation='Fade In Top'>
+    <AnimationContainer animation='Fade In Top' duration={ 1 }>
       <StyledContainer id={ id }>
         <SectionHeader number=".02" title="Where I've Been So Far?." />
         <ExperienceContentContainer>
@@ -128,6 +126,7 @@ export default function ExperienceSection ( { id }: { id: string } )
                     width={ 150 }
                     height={ 0 }
                     alt={ companyListData[ state.selected ].name }
+                    className='aspect-video'
                   />
                 </StyledShowCardLogo>
                 <ShowCardHeaderContent>
