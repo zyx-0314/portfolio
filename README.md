@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/zyx-0314/">
-    <img src="./public/static/images/nyebe_white.png" alt="Logo" width="120" height="100">
+    <img src="./public/static/images/nyebe_white.webp" alt="Logo" width="120" height="100">
   </a>
 
   <h3 align="center">Portfolio Project</h3>
@@ -53,7 +53,7 @@ You can check the UI/UX Design in [Figma](https://www.figma.com/community/file/1
 
 ### Built With 🛠️
 
-[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url] [![Emotion][Emotion.com]][Emotion-url]
+[![Next][NextJS.com]][NextJS-url] [![Tailwind][TailwindCSS.com]][NextJS-url] [![Emotion][Emotion.com]][Emotion-url] [![FramerMotion][FramerMotion.com]][FramerMotion-url]
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
@@ -69,6 +69,8 @@ Version List.
 - v.1.0.6
   - Improve Display for Mobile
   - Add New Project
+  v.1.0.8
+  - Improve SEO Score and Optimization of Performance
 
 <!-- - xx.xx.xx (Major Version . Minor Version . Patch Version) -->
   <!-- - Description -->
@@ -81,8 +83,12 @@ Version List.
 
 ## Road Map 📌
 
-- Add Volunteer Works
-- Add Project Page
+- Add Volunteer Works Section
+- Add Education and Certifications Section
+  - Education Section
+  - MOOC Certifications Section
+  - Specialized Certifications Section
+- Add Project Information Page
 
 <br />
 
