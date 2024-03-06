@@ -73,6 +73,24 @@ export default function ExperienceSection ( { id }: { id: string } )
         'ReactJS / NextJS, TailWind CSS, Laravel, React Native, Docker, Git, Insomnia',
       ],
     },
+    {
+      name: 'Far Eastern University - Institute of Technology',
+      logo: '/static/companies/Argon_Software.webp',
+      description: 'Higher Education Institution',
+      email: 'https://www.feutech.edu.ph/',
+      content: [
+        'October - Present',
+        '',
+        'Introctor I',
+        '',
+        '- Teach Basic Programming in C++',
+        '- Teach Basic Web',
+        '- Teach Basic Mobile',
+        '- Teach Algorithm ',
+        '',
+        'C++, Web Basic, TailWind, GitHub, Kotlin',
+      ],
+    },
   ];
 
   const selectionParams: ButtonProps = {
