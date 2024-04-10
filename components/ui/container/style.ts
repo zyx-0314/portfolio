@@ -18,6 +18,23 @@ export const StyledSectionContainer = styled.section`
 	}
 `;
 
+export const StyledSectionContainerNoMargin = styled.section`
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	width: 100%;
+	z-index: 10;
+
+	@media (max-width: 1480px) {
+		width: 90%;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+`;
+
 export const HeroStyledSectionContainer = styled.section`
 	padding-top: 3rem;
 	align-items: center;

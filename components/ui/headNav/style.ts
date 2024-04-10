@@ -10,7 +10,7 @@ export const HeaderStyles = styled(motion.header)`
 	width: 100%;
 	padding: 1rem 2rem 0.5rem 2rem;
 	z-index: 1000;
-	background: #ffffff15;
+	background: #000c0871;
 
 	@media (max-width: 768px) {
 		padding: 1rem 1rem 1rem 1rem;

@@ -1,21 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import { HeroStyledSectionContainer, StyledMainContainer, StyledSectionContainer } from './style'
-
-StyledContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  id: PropTypes.string,
-  className: PropTypes.string,
-  specialType: PropTypes.oneOf( [ 'Hero', 'Main' ] ),
-};
+import { HeroStyledSectionContainer, StyledSectionContainerNoMargin, StyledMainContainer, StyledSectionContainer } from './style'
 
 interface ContainerProps
 {
   children: React.ReactNode
   id?: string
   className?: string
-  specialType?: 'Hero' | 'Main'
+  specialType?: 'Hero' | 'Main' | 'Top' | 'NoMargin'
 }
 
 /**
@@ -43,10 +36,17 @@ export function StyledContainer ( { id, children, specialType, className }: Cont
           { children }
         </HeroStyledSectionContainer>
       );
+    case 'NoMargin':
+      return (
+        <StyledSectionContainerNoMargin>
+          { children }
+        </StyledSectionContainerNoMargin>
+      )
+    default:
+      return (
+        <StyledSectionContainer id={ id } className={ className } >
+          { children }
+        </StyledSectionContainer>
+      );
   }
-  return (
-    <StyledSectionContainer id={ id } className={ className }>
-      { children }
-    </StyledSectionContainer>
-  );
 }

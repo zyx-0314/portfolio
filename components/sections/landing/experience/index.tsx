@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { useReducer } from 'react';
 
@@ -14,20 +16,14 @@ import
   ExperienceContentContainer,
 } from './style'
 
+import { ExperienceData } from '@/types';
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page';
 import { ButtonProps, StyledButton } from '@/components/ui/buttons'
 
 
-interface ExperienceData
-{
-  name: string
-  logo: string
-  description: string
-  email: string
-  content: string[]
-}
+
 
 /**
  * Renders a section displaying a list of companies and their details based on the user's selection.
@@ -36,7 +32,7 @@ interface ExperienceData
  * @param {string} props.id - The ID of the section.
  * @returns {JSX.Element} The rendered section.
  */
-export default function ExperienceSection ( { id }: { id: string } )
+export default function ExperienceSection ( { id, companyListData }: { id: string, companyListData: ExperienceData[] } )
 {
   const initialState = { selected: 0 };
 
@@ -53,45 +49,6 @@ export default function ExperienceSection ( { id }: { id: string } )
   }
 
   const [ state, dispatch ] = useReducer( reducer, initialState );
-
-  const companyListData: ExperienceData[] = [
-    {
-      name: 'Argon Software',
-      logo: '/static/companies/Argon_Software.webp',
-      description: 'Software Service Provider',
-      email: 'https://argonsoftware.info/',
-      content: [
-        'March - June 2023 ( 4 Months )',
-        '',
-        'Software Engineering Intern',
-        '',
-        '- Develop a Front-End Website using NextJS/ReactJS',
-        '- Designed and implemented a robust REST API using Laravel and MySQL, successfully facilitating seamless data storage and retrieval for improved system efficiency.',
-        '- Executed SEO strategies, propelling website visibility to achieve a notable enhancement from a score of 80 to an impressive 100, base on PageSpeed Insight.',
-        '- Leveraged Git and GitHub for seamless collaboration, harnessed Docker for streamlined application maintenance, and employed Insomnia/Postman for rigorous API testing, ensuring top-notch functionality and reliability.',
-        '',
-        'ReactJS / NextJS, TailWind CSS, Laravel, React Native, Docker, Git, Insomnia',
-      ],
-    },
-    {
-      name: 'Far Eastern University - Institute of Technology',
-      logo: '/static/companies/Argon_Software.webp',
-      description: 'Higher Education Institution',
-      email: 'https://www.feutech.edu.ph/',
-      content: [
-        'October - Present',
-        '',
-        'Introctor I',
-        '',
-        '- Teach Basic Programming in C++',
-        '- Teach Basic Web',
-        '- Teach Basic Mobile',
-        '- Teach Algorithm ',
-        '',
-        'C++, Web Basic, TailWind, GitHub, Kotlin',
-      ],
-    },
-  ];
 
   const selectionParams: ButtonProps = {
     text: '',

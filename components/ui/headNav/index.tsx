@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
@@ -17,17 +19,14 @@ import { ButtonGroupStyles, HeaderStyles, LogoStyles, NavButton } from './style'
 export function StyledHeaderNavigation ( { buttonList }: { buttonList: ButtonProps[] } )
 {
 
-  // State and controls for mobile menu button and header animation
   const [ isMenuOpen, setIsMenuOpen ] = useState( false );
   const controls = useAnimation();
 
-  // Function to handle mobile menu button click
   function handleMenu ( params: boolean )
   {
     setIsMenuOpen( params );
   }
 
-  // Effect to handle header animation on scroll
   useEffect( () =>
   {
     let prevScrollY = window.scrollY;
@@ -52,7 +51,8 @@ export function StyledHeaderNavigation ( { buttonList }: { buttonList: ButtonPro
     return () => window.removeEventListener( 'scroll', handleScroll );
   }, [ controls ] );
 
-  // JSX element representing the header navigation bar
+  if ( !buttonList ) return null;
+
   return (
     <>
       <HeaderStyles initial={ { y: 0 } } animate={ controls }>
@@ -62,7 +62,7 @@ export function StyledHeaderNavigation ( { buttonList }: { buttonList: ButtonPro
           </Link>
         </LogoStyles>
         <ButtonGroupStyles>
-          { buttonList.map( ( button, index ) => (
+          { buttonList && buttonList.map( ( button, index ) => (
             <StyledButton
               key={ index }
               params={ button }

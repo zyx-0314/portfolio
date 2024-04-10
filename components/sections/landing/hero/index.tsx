@@ -29,14 +29,17 @@ export default function HeroSection ( { id }: { id: string } )
         </Headers>
         <AnimationContainer animation='Slide In Right'>
           <StyledParagraph>
-            Aspiring <span>Software Engineer</span> and recent <span>Computer Science</span> graduate. Passionate about building user-friendly, accessible digital experiences with a human-centered focus.<br /><br />
-            Actively seeking <span>Entry-level Opportunities</span> in <span>Front-end and/or Back-end Development</span> to contribute to innovative projects. Let&apos;s connect and explore how I can make a positive impact!
+            <span>Software Engineer</span> and recent <span>Computer Science</span> graduate. Passionate about building user-friendly, accessible digital experiences with a human-centered focus.
+            <br /><br />
+            Let&apos;s connect and explore how I can make a positive impact!
           </StyledParagraph>
         </AnimationContainer>
         <AnimationContainer animation='Slide In Right'>
-          <StyledButton
-            params={ { text: 'Wanna, Say Hello?', type: 'Link-InPage', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { fontSize: "1rem", paddingXY: "1rem 1.5rem" } } }
-          />
+          <div className="w-fit">
+            <StyledButton
+              params={ { text: 'Wanna, Say Hello?', type: 'Link-InPage', design: 'PopUp', href: 'mailto:ramirezian037@gmail.com', designControl: { fontSize: "1rem", paddingXY: "1rem 1.5rem" } } }
+            />
+          </div>
         </AnimationContainer>
       </HeroTextContent>
       <AnimationContainer animation='Fade In Bottom'>

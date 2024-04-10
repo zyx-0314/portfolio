@@ -70,18 +70,24 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
       <div>
         <AnimationContainer animation='Slide In Top'>
           <StyledParagraph>
-            I&apos;m <span>Ian Cedric Ramirez</span>, an aspiring <span>Software Engineer</span> with a passion for creating things that live on the internet.
+            Hello, I&apos;m <span>Ian Cedric Ramirez</span>, and I&apos;m excited to share a bit about myself with you.
             <br /> <br />
-            Recently graduated in <span>Computer Science</span>, I&apos;ve had the privilege of gaining practical experience as a <span>Software Engineer Intern</span> for <span>Four(4) Months</span>. I&apos;m Highly <span>Motivated</span>, <span>Result-Oriented</span>, and dedicated to <span>Continuous Growth</span>. My goal is to make a Significant Impact in the tech industry, and I thrive in Collaborating with teams within <span>Agile Development Environments</span>. As I explore opportunities, I&apos;m eager to contribute my skills and expertise to build accessible, inclusive products and digital experiences that leave a positive mark.
+            I come from the picturesque town of <span>Echague in Isabela</span>, a place that has always been a source of inspiration for me.
             <br /> <br />
-            I&apos;m currently on the lookout for <span>Entry-Level Opportunities</span> to kickstart my professional journey.
+            I pursued my passion for technology by majoring in <span>Computer Science</span> at <span>Isabela State University</span>. This academic journey not only enriched my knowledge but also ignited my curiosity about the ever-evolving tech landscape. As part of my ongoing commitment to learning, I&apos;m currently working towards becoming an <span>AWS Certified Cloud Practitioner</span>, an endeavor that reflects my dedication to staying on the cutting edge of cloud technologies.
             <br /> <br />
-            If you have any openings or know of exciting opportunities, I&apos;d love to connect and discuss how I can be a valuable asset to your team. Let&apos;s make amazing things together!
+            In my professional journey, I&apos;ve worn multiple hats in various project teams. My roles have ranged from <span>Backend Developer</span> to <span>Frontend Developer</span>, allowing me to contribute to projects from a technical perspective. I&apos;ve also taken on the responsibilities of a <span > Project Manager</span >, where I&apos;ve coordinated efforts and ensured the successful completion of projects. Additionally, I&apos;ve had the privilege of representing different organizations, both within my school and the local community, which has broadened my horizons and deepened my understanding of <span>teamwork</span> and <span>collaboration</span>.
+            <br /> <br />
+            One of my standout soft skills is <span>adaptability</span>. I thrive in dynamic environments and can swiftly adjust to new challenges and opportunities. My <span>proactive</span> approach enables me to anticipate issues and take the initiative to resolve them effectively.
+            <br /> <br />
+            Looking forward, my career goal is to make a mark in the world of <span>DevOps</span>. I firmly believe that a strong background in both <span>development</span> and <span>operations</span> is essential to bridging the gap between these critical aspects of software delivery. I am enthusiastic about the exciting possibilities that the DevOps field holds and am eager to contribute my skills and passion to a team that values innovation and continuous improvement.
+            <br /> <br />
+            Thank you for taking the time to get to know me better. I look forward to sharing more about my experiences and accomplishments through my portfolio projects.
             <br /> <br />
           </StyledParagraph>
         </AnimationContainer>
         <CategoryHeadings>
-          Technologies I Currently Use:
+          Technologies I&apos;ve Use:
         </CategoryHeadings>
         <StyledGridDisplay list={ listTechs } />
         <br />

@@ -7,7 +7,7 @@ export const ProjectContainer = styled.div<{ value: number }>`
 		value % 2 ? 'justify-content: flex-end;' : 'justify-content: flex-start;'}
 `;
 
-export const ProjectContentContainer = styled.div`
+export const ProjectContentContainer = styled.a`
 	border: 2px solid ${colors.white};
 	border-radius: 5px;
 	width: 85%;

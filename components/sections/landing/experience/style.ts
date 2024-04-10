@@ -96,8 +96,4 @@ export const ShowCardContent = styled.div`
 	width: 100%;
 	border-radius: 5px;
 	padding: 0.5rem;
-
-	p {
-		font-size: 0.7rem;
-	}
 `;

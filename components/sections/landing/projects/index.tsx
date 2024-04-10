@@ -13,9 +13,12 @@ import
   ProjectContentContainer,
 } from './style'
 
+import { ProjectData } from '@/types'
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page'
+
+
 
 /**
  * Renders a section displaying a list of projects with their details.
@@ -24,63 +27,8 @@ import AnimationContainer from '@/components/ui/animations/page'
  * @param id - The id of the container element.
  * @returns A container element with a section header and a list of project containers.
  */
-export default function ProjectsSection ( { id }: { id: string } )
+export default function ProjectsSection ( { id, projectList }: { id: string, projectList: ProjectData[] } )
 {
-  const projectList = [
-    {
-      title: 'SIMS - Student Information Management System',
-      type: 'Web Application',
-      description: 'A web-based application that manages the student information of a school. It has a feature that can generate a report of the student information.',
-      image: 'SIMS.webp',
-      link: '',
-      techs: [
-        'PHP',
-        'MySQL',
-        'Bootstrap CSS',
-      ],
-      schema: 'WebApplication'
-    }, {
-      title: 'Path Utility Guide System',
-      type: 'Android Application - Experimental (Research)',
-      description: 'An android application that can guide the user in their path by using Neural Networks Algorithms inbeded in the Application. It has a feature that can detect the objects spatial location, approximate distance, Danger Guage and Object Class by using Neural Networks Algorithms inbeded in the Application.',
-      image: 'PUGS.webp',
-      link: '',
-      techs: [
-        'Kotlin',
-        'Python',
-        'JavaScript',
-        'TensorFlow'
-      ],
-      schema: 'MobileApplication'
-    }, {
-      title: 'ECommerce CMS',
-      type: 'Sample Demo for Full Stack Development',
-      description: 'I\'ve crafted a Next.js E-Commerce CMS demo highlighting my full-stack skills.The frontend offers dynamic product listings, a smooth cart experience, synced perfectly with the Node.js backend. Expertise in APIs, security, and efficiency showcased.',
-      image: 'Ecommerce_CMS.webp',
-      link: '',
-      techs: [
-        'NextJS',
-        'MySQL',
-        'Prisma',
-        'Tailwind CSS',
-        'Stripe - Clerk'
-      ],
-      schema: 'MobileApplication'
-    }, {
-      title: 'ECommerce',
-      type: 'Sample Demo for Full Stack Development',
-      description: 'I\'ve created an E-Commerce store using Next.js.The frontend boasts dynamic product listings, an intuitive cart, and seamless API integration. Backed by a secure Node.js backend, it showcases my prowess in full - stack development for efficient and dynamic online shopping platforms.',
-      image: 'Ecommerce.webp',
-      link: '',
-      techs: [
-        'NextJS',
-        'Tailwind CSS',
-        'Stripe'
-      ],
-      schema: 'MobileApplication'
-    },
-  ]
-
   /**
    * Formats the project number.
    * 
@@ -100,12 +48,15 @@ export default function ProjectsSection ( { id }: { id: string } )
       { projectList.map( ( project, index ) => (
         <AnimationContainer animation={ index % 2 ? 'Slide In Right' : 'Slide In Left' } key={ index }>
           <ProjectContainer value={ index } itemScope itemType={ `https://schema.org/${ project.schema }` }>
-            {/* <ProjectContainer value={ index } key={ index } href={ project.link ? project.link : undefined } target='_blank' rel='noopener noreferrer' title={ project.title }> */ }
-            <ProjectContentContainer itemProp='image'>
+            <ProjectContentContainer
+              itemProp='image'
+              href={ `/projects/${ project.id }` }
+              title={ project.title }
+            >
               <Image
                 alt={ project.title }
-                src={ `/static/projects/${ project.image }` }
-                layout='fill'
+                src={ `/static/projects/${ project.id }/${ project.wallpaper }` }
+                fill
                 loading="lazy"
                 className='object-cover aspect-video'
               />
