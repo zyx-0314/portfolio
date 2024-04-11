@@ -4,12 +4,11 @@ import Image from "next/image"
 import { ProjectHeroContainer } from "../style"
 import HeroHeader from "@/components/ui/hero-header"
 
-interface Props
-{
+interface Props {
   ProjectData: {
     title: string
     type: string
-    reponsibility: string
+    responsibility: string
     association: string
     wallpaper: string
     description: string
@@ -19,18 +18,17 @@ interface Props
 
 const HeroSection = (
   { ProjectData, folder }: Props
-) =>
-{
+) => {
   ProjectData.wallpaper = ProjectData.wallpaper ? ProjectData.wallpaper : 'placeholder.webp'
 
   return (
     <div className='lg:h-[70vh] md:h-[55vh] relative w-full'>
       <Image
-        alt={ 'ProjectData.title' }
+        alt={'ProjectData.title'}
         src={
-          `/static/projects/${ folder }/${ ProjectData.wallpaper
-            ? `${ ProjectData.wallpaper }`
-            : 'placeholder.webp' }`
+          `/static/projects/${folder}/${ProjectData.wallpaper
+            ? `${ProjectData.wallpaper}`
+            : 'placeholder.webp'}`
         }
         fill
         loading="lazy"
@@ -43,26 +41,26 @@ const HeroSection = (
           >
             <div className="bg-black/70 rounded-lg p-5 relative text-white flex flex-col gap-5 lg:w-full md:w-[85%]">
               <HeroHeader
-                headerTag={ ProjectData.type }
-                headerContent={ ProjectData.title }
+                headerTag={ProjectData.type}
+                headerContent={ProjectData.title}
                 isMain
               />
               <br />
               <div className="flex gap-5">
                 <HeroHeader
                   headerTag='Responsibility'
-                  headerContent={ ProjectData.reponsibility }
+                  headerContent={ProjectData.responsibility}
                   className='text-2xl flex flex-col justify-between w-full'
 
                 />
                 <HeroHeader
                   headerTag='Association'
-                  headerContent={ ProjectData.association }
+                  headerContent={ProjectData.association}
                   className='text-2xl flex flex-col w-full'
                 />
               </div>
               <div className="text-center mt-5">
-                { ProjectData.description }
+                {ProjectData.description}
               </div>
             </div>
           </ProjectHeroContainer>

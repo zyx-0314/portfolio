@@ -19,7 +19,7 @@ export interface ProjectData {
 export interface FullProjectData extends ProjectData {
 	association: string;
 	features: FeatureData[];
-	reponsibility: string;
+	responsibility: string;
 	projectBackground: string;
 	projectBackgroundImages: string[];
 	challenges: string;
@@ -29,7 +29,7 @@ export interface FullProjectData extends ProjectData {
 	designPhase: string;
 	designPhaseImages: string[];
 	developmentPhase: string;
-	developementPhaseImages: string[];
+	developmentPhaseImages: string[];
 	final: string;
 	finalPhaseImages: string[];
 	coAuthors: CoAuthorData[];

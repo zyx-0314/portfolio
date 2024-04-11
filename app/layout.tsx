@@ -5,7 +5,7 @@ import Script from 'next/script'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
-const poppins = Poppins( { weight: "500", subsets: [ 'latin' ] } )
+const poppins = Poppins({ weight: "500", subsets: ['latin'] })
 
 import { Floaters } from '@/components/ui/floaters'
 import { ButtonProps } from '@/components/ui/buttons';
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
   verification: {
     google: '45zB7vn-RNN5_tVKbrmX3ype7AiqKp52U7UOU5XkZZw',
     other: {
-      me: [ 'ramirezian037@gmail.com' ],
+      me: ['ramirezian037@gmail.com'],
     },
   },
 }
@@ -99,14 +99,12 @@ export const metadata: Metadata = {
  * @param {React.ReactNode} props.children - The child components to be wrapped by the RootLayout component.
  * @returns {React.ReactNode} - The HTML structure with the consistent layout for all pages and components.
  */
-export default function RootLayout ( {
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
-} )
-{
-  const addProductJsonLd = () =>
-  {
+}) {
+  const addProductJsonLd = () => {
     return {
       __html: `{
         "@context": "http://schema.org",
@@ -125,10 +123,10 @@ export default function RootLayout ( {
 
   // Array of button objects for navigation buttons
   const buttonList: ButtonProps[] = [
-    { text: 'About', href: '#about', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Experience', href: '#experience', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Projects', href: '#projects', type: 'Link-InPage', design: 'Lined' },
-    { text: 'Contact', href: '#contact', type: 'Link-InPage', design: 'Lined' },
+    { text: 'About', href: '/#about', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Experience', href: '/#experience', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Projects', href: '/#projects', type: 'Link-InPage', design: 'Lined' },
+    { text: 'Contact', href: '/#contact', type: 'Link-InPage', design: 'Lined' },
     { text: 'Resume', filename: 'Ramirez_Ian_Cedric.pdf', type: 'Download', design: 'PopUp' }
   ];
 
@@ -140,7 +138,7 @@ export default function RootLayout ( {
           id="gtag-analytics"
           strategy='afterInteractive'
         >
-          { `
+          {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
@@ -150,11 +148,11 @@ export default function RootLayout ( {
           ` }
         </Script>
       </head>
-      <body className={ `${ poppins.className } bg-teal-950` }>
+      <body className={`${poppins.className} bg-teal-950`}>
         <StrictMode>
           <Floaters />
-          <StyledHeaderNavigation buttonList={ buttonList } />
-          { children }
+          <StyledHeaderNavigation buttonList={buttonList} />
+          {children}
           <Footer />
         </StrictMode>
       </body>

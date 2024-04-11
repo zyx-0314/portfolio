@@ -6,24 +6,6 @@ export const getAppContents = async () => {
 	} = {
 		experience: [
 			{
-				name: 'Argon Software',
-				logo: '/static/companies/Argon_Software.webp',
-				description: 'Software Service Provider',
-				email: 'https://argonsoftware.info/',
-				content: [
-					'March - June 2023 ( 4 Months )',
-					'',
-					'Software Engineering Intern',
-					'',
-					'- Develop a Front-End Website using NextJS/ReactJS',
-					'- Designed and implemented a robust REST API using Laravel and MySQL, successfully facilitating seamless data storage and retrieval for improved system efficiency.',
-					'- Executed SEO strategies, propelling website visibility to achieve a notable enhancement from a score of 80 to an impressive 100, base on PageSpeed Insight.',
-					'- Leveraged Git and GitHub for seamless collaboration, harnessed Docker for streamlined application maintenance, and employed Insomnia/Postman for rigorous API testing, ensuring top-notch functionality and reliability.',
-					'',
-					'ReactJS / NextJS, TailWind CSS, Laravel, React Native, Docker, Git, Insomnia',
-				],
-			},
-			{
 				name: 'Far Eastern University - Institute of Technology',
 				logo: '/static/companies/FEU_TECH.webp',
 				description: 'Higher Education Institution',
@@ -41,6 +23,25 @@ export const getAppContents = async () => {
 					'C++, Web Basic, TailWind, GitHub, Kotlin',
 				],
 			},
+			{
+				name: 'Argon Software',
+				logo: '/static/companies/Argon_Software.webp',
+				description: 'Software Service Provider',
+				email: 'https://argonsoftware.info/',
+				content: [
+					'March - June 2023 ( 4 Months )',
+					'',
+					'Software Engineering Intern',
+					'',
+					'- Develop a Front-End Website using NextJS/ReactJS',
+					'- Designed and implemented a robust REST API using Laravel and MySQL, successfully facilitating seamless data storage and retrieval for improved system efficiency.',
+					'- Executed SEO strategies, propelling website visibility to achieve a notable enhancement from a score of 80 to an impressive 100, base on PageSpeed Insight.',
+					'- Leveraged Git and GitHub for seamless collaboration, harnessed Docker for streamlined application maintenance, and employed Insomnia/Postman for rigorous API testing, ensuring top-notch functionality and reliability.',
+					'',
+					'ReactJS / NextJS, TailWind CSS, Laravel, React Native, Docker, Git, Insomnia',
+				],
+			},
+
 		],
 	};
 
