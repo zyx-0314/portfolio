@@ -1,33 +1,28 @@
+'use client'
+
 import Image from 'next/image'
 import { useReducer } from 'react';
 
-import
-{
-  StyledShowCard,
-  ShowCardContent,
-  StyledUnorderList,
-  ShowCardContainer,
-  StyledShowCardLogo,
-  StyledShowCardHeader,
-  ShowCardHeaderContent,
-  ExperienceListContainer,
-  ExperienceContentContainer,
+import {
+StyledShowCard,
+ShowCardContent,
+StyledUnorderList,
+ShowCardContainer,
+StyledShowCardLogo,
+StyledShowCardHeader,
+ShowCardHeaderContent,
+ExperienceListContainer,
+ExperienceContentContainer,
 } from './style'
 
+import { ExperienceData } from '@/types';
 import { StyledContainer } from '@/components/ui/container'
 import { SectionHeader } from '@/components/ui/sectionHeader'
 import AnimationContainer from '@/components/ui/animations/page';
 import { ButtonProps, StyledButton } from '@/components/ui/buttons'
 
 
-interface ExperienceData
-{
-  name: string
-  logo: string
-  description: string
-  email: string
-  content: string[]
-}
+
 
 /**
  * Renders a section displaying a list of companies and their details based on the user's selection.
@@ -36,15 +31,12 @@ interface ExperienceData
  * @param {string} props.id - The ID of the section.
  * @returns {JSX.Element} The rendered section.
  */
-export default function ExperienceSection ( { id }: { id: string } )
-{
+export default function ExperienceSection({ id, companyListData }: { id: string, companyListData: ExperienceData[] }) {
   const initialState = { selected: 0 };
 
 
-  function reducer ( state: any, action: any )
-  {
-    switch ( action.type )
-    {
+  function reducer(state: any, action: any) {
+    switch (action.type) {
       case 'SELECT':
         return { selected: action.payload };
       default:
@@ -52,46 +44,7 @@ export default function ExperienceSection ( { id }: { id: string } )
     }
   }
 
-  const [ state, dispatch ] = useReducer( reducer, initialState );
-
-  const companyListData: ExperienceData[] = [
-    {
-      name: 'Argon Software',
-      logo: '/static/companies/Argon_Software.webp',
-      description: 'Software Service Provider',
-      email: 'https://argonsoftware.info/',
-      content: [
-        'March - June 2023 ( 4 Months )',
-        '',
-        'Software Engineering Intern',
-        '',
-        '- Develop a Front-End Website using NextJS/ReactJS',
-        '- Designed and implemented a robust REST API using Laravel and MySQL, successfully facilitating seamless data storage and retrieval for improved system efficiency.',
-        '- Executed SEO strategies, propelling website visibility to achieve a notable enhancement from a score of 80 to an impressive 100, base on PageSpeed Insight.',
-        '- Leveraged Git and GitHub for seamless collaboration, harnessed Docker for streamlined application maintenance, and employed Insomnia/Postman for rigorous API testing, ensuring top-notch functionality and reliability.',
-        '',
-        'ReactJS / NextJS, TailWind CSS, Laravel, React Native, Docker, Git, Insomnia',
-      ],
-    },
-    {
-      name: 'Far Eastern University - Institute of Technology',
-      logo: '/static/companies/Argon_Software.webp',
-      description: 'Higher Education Institution',
-      email: 'https://www.feutech.edu.ph/',
-      content: [
-        'October - Present',
-        '',
-        'Introctor I',
-        '',
-        '- Teach Basic Programming in C++',
-        '- Teach Basic Web',
-        '- Teach Basic Mobile',
-        '- Teach Algorithm ',
-        '',
-        'C++, Web Basic, TailWind, GitHub, Kotlin',
-      ],
-    },
-  ];
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const selectionParams: ButtonProps = {
     text: '',
@@ -100,39 +53,38 @@ export default function ExperienceSection ( { id }: { id: string } )
     designControl: { paddingXY: '.5rem 2.5rem', width: '100%' },
   };
 
-  const design = [ '<h1>', '</h1 >' ];
+  const design = ['<h1>', '</h1 >'];
 
   const companyLink: ButtonProps = {
-    text: companyListData[ state.selected ].email,
-    href: `${ companyListData[ state.selected ].email }`,
+    text: companyListData[state.selected].email,
+    href: `${companyListData[state.selected].email}`,
     design: 'Lined',
     type: 'Link-NewTab',
     designControl: { paddingXY: '0', width: 'fit-content' },
   };
 
-  function handleSelected ( index: number )
-  {
-    dispatch( { type: 'SELECT', payload: index } );
+  function handleSelected(index: number) {
+    dispatch({ type: 'SELECT', payload: index });
   }
 
   return (
-    <AnimationContainer animation='Fade In Top' duration={ 1 }>
-      <StyledContainer id={ id }>
+    <AnimationContainer animation='Fade In Top' duration={1}>
+      <StyledContainer id={id}>
         <SectionHeader number=".02" title="Where I've Been So Far?." />
         <ExperienceContentContainer>
           <ExperienceListContainer>
             <StyledUnorderList>
-              { companyListData.map( ( company, index ) => (
-                <li key={ `${ company.name }-${ index }` }>
+              {companyListData.map((company, index) => (
+                <li key={`${company.name}-${index}`}>
                   <StyledButton
-                    params={ {
+                    params={{
                       ...selectionParams,
                       text: company.name,
-                      onClick: () => handleSelected( index ),
-                    } }
+                      onClick: () => handleSelected(index),
+                    }}
                   />
                 </li>
-              ) ) }
+              ))}
             </StyledUnorderList>
           </ExperienceListContainer>
           <ShowCardContainer>
@@ -140,27 +92,27 @@ export default function ExperienceSection ( { id }: { id: string } )
               <StyledShowCardHeader>
                 <StyledShowCardLogo>
                   <Image
-                    src={ companyListData[ state.selected ].logo }
-                    width={ 150 }
-                    height={ 0 }
-                    alt={ companyListData[ state.selected ].name }
-                    className='aspect-video'
+                    src={companyListData[state.selected].logo}
+                    width={150}
+                    height={0}
+                    alt={companyListData[state.selected].name}
+                    className=''
                   />
                 </StyledShowCardLogo>
                 <ShowCardHeaderContent>
-                  <h2>{ companyListData[ state.selected ].name }</h2>
-                  <h3>{ companyListData[ state.selected ].description }</h3>
+                  <h2>{companyListData[state.selected].name}</h2>
+                  <h3>{companyListData[state.selected].description}</h3>
                   <div>
-                    <StyledButton params={ companyLink } />
+                    <StyledButton params={companyLink} />
                   </div>
                 </ShowCardHeaderContent>
               </StyledShowCardHeader>
               <ShowCardContent>
-                <p>{ design[ 0 ] }</p>
-                { companyListData[ state.selected ].content.map( ( content, index ) => (
-                  <p key={ index }>&emsp;|&emsp;{ content }</p>
-                ) ) }
-                <p>{ design[ 1 ] }</p>
+                <p>{design[0]}</p>
+                {companyListData[state.selected].content.map((content, index) => (
+                  <p key={index}>&emsp;|&emsp;{content}</p>
+                ))}
+                <p>{design[1]}</p>
               </ShowCardContent>
             </StyledShowCard>
           </ShowCardContainer>

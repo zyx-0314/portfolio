@@ -1,3 +1,6 @@
+import { DiSqllite } from "react-icons/di";
+import { SiMongodb } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 import React from 'react'
 import { GrMysql } from 'react-icons/gr'
 import { VscGithub } from 'react-icons/vsc'
@@ -25,12 +28,12 @@ import { CategoryHeadings } from './style'
  * @param {string} id - The id of the container element for the section.
  * @returns {JSX.Element} The rendered section component.
  */
-export default function AboutSection ( { id }: { id: string } ): JSX.Element
-{
+export default function AboutSection({ id }: { id: string }): JSX.Element {
   // Arrays of strings representing the author's skills
 
   const listTechs = [
     { name: 'ReactJS', icon: <FaReact /> },
+    { name: 'NextJS', icon: <TbBrandNextjs /> },
     { name: 'Laravel', icon: <FaLaravel /> },
     { name: 'React Native', icon: <FaReact /> },
     { name: 'BootStrap CSS', icon: <RiBootstrapLine /> },
@@ -44,7 +47,9 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
     { name: 'JavaScript', icon: <TbBrandJavascript /> },
     { name: 'TypeScript', icon: <TbBrandTypescript /> },
     { name: 'PHP', icon: <FaPhp /> },
-    { name: 'SQL', icon: <GrMysql /> },
+    { name: 'MySQL', icon: <GrMysql /> },
+    { name: 'SQLite', icon: <DiSqllite /> },
+    { name: 'MongoDB', icon: <SiMongodb /> },
     { name: 'Python', icon: <TbBrandPython /> },
     { name: 'C++', icon: <SiCplusplus /> },
     { name: 'Kotlin', icon: <TbBrandKotlin /> }
@@ -63,37 +68,41 @@ export default function AboutSection ( { id }: { id: string } ): JSX.Element
   ]
 
   return (
-    <StyledContainer id={ id }>
+    <StyledContainer id={id}>
       <AnimationContainer animation='Slide In Right'>
         <SectionHeader number=".01" title="About Me" />
       </AnimationContainer>
       <div>
         <AnimationContainer animation='Slide In Top'>
           <StyledParagraph>
-            I&apos;m <span>Ian Cedric Ramirez</span>, an aspiring <span>Software Engineer</span> with a passion for creating things that live on the internet.
+            Hello, I&apos;m <span>Ian Cedric Ramirez</span>, an instructor and freelance developer currently based in Manila. Let me share a bit about myself.
             <br /> <br />
-            Recently graduated in <span>Computer Science</span>, I&apos;ve had the privilege of gaining practical experience as a <span>Software Engineer Intern</span> for <span>Four(4) Months</span>. I&apos;m Highly <span>Motivated</span>, <span>Result-Oriented</span>, and dedicated to <span>Continuous Growth</span>. My goal is to make a Significant Impact in the tech industry, and I thrive in Collaborating with teams within <span>Agile Development Environments</span>. As I explore opportunities, I&apos;m eager to contribute my skills and expertise to build accessible, inclusive products and digital experiences that leave a positive mark.
+            Originally from the picturesque town of <span>Echague in Isabela</span>, I embarked on my journey in technology by pursuing a degree in <span>Computer Science at Isabela State University</span>. This educational path not only broadened my knowledge but also ignited a deep curiosity about the ever-evolving tech landscape. As part of my commitment to continuous learning, I am currently pursuing a <span>Master&apos;s degree in IT (MIT) at PUP-Manila</span>, while also honing my skills through freelance development work.
             <br /> <br />
-            I&apos;m currently on the lookout for <span>Entry-Level Opportunities</span> to kickstart my professional journey.
+            In my professional journey, I&apos;ve embraced various roles within project teams, from <span>Backend Developer</span> to <span>Frontend Developer</span>. These experiences have provided me with a holistic understanding of project dynamics and the importance of effective collaboration. Additionally, my involvement in representing different organizations has enriched my perspective on teamwork and community engagement.
             <br /> <br />
-            If you have any openings or know of exciting opportunities, I&apos;d love to connect and discuss how I can be a valuable asset to your team. Let&apos;s make amazing things together!
+            Adaptability is a key strength of mine. I thrive in dynamic environments and can swiftly adjust to new challenges and opportunities. My proactive approach allows me to anticipate issues and take decisive action to address them effectively.
+            <br /> <br />
+            Looking ahead, my career aspiration remains focused on making a significant impact in the DevOps field. I firmly believe that a strong foundation in both development and operations is vital for driving innovation and continuous improvement in software delivery. As I continue to refine my skills and pursue further education, such as my AWS Cloud Practitioner training with Edukasyon.ph, I am eager to contribute my expertise to a team that values innovation and embraces the DevOps philosophy.
+            <br /> <br />
+            Thank you for taking the time to learn more about me. I am excited about the opportunities ahead and look forward to sharing my portfolio projects and experiences with you.
             <br /> <br />
           </StyledParagraph>
         </AnimationContainer>
         <CategoryHeadings>
-          Technologies I Currently Use:
+          Technologies I&apos;ve Use:
         </CategoryHeadings>
-        <StyledGridDisplay list={ listTechs } />
+        <StyledGridDisplay list={listTechs} />
         <br />
         <CategoryHeadings>
           Languages I&apos;ve Tried
         </CategoryHeadings>
-        <StyledGridDisplay list={ listLanguages } />
+        <StyledGridDisplay list={listLanguages} />
         <br />
         <CategoryHeadings>
           Tools I&apos;ve Used
         </CategoryHeadings>
-        <StyledGridDisplay list={ listTools } />
+        <StyledGridDisplay list={listTools} />
       </div>
     </StyledContainer>
   );
