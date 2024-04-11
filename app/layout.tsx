@@ -1,17 +1,17 @@
 import './globals.css'
 
-import Head from 'next/head';
 import Script from 'next/script'
+import { StrictMode } from 'react'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const poppins = Poppins({ weight: "500", subsets: ['latin'] })
 
 import { Floaters } from '@/components/ui/floaters'
-import { ButtonProps } from '@/components/ui/buttons';
+import { ButtonProps } from '@/components/ui/buttons'
 import { StyledHeaderNavigation } from '@/components/ui/headNav'
-import { StrictMode } from 'react';
-import Footer from '@/components/ui/footer/page';
+import Footer from '@/components/ui/footer/page'
 
 
 export const metadata: Metadata = {
@@ -153,6 +153,7 @@ export default function RootLayout({
           <Floaters />
           <StyledHeaderNavigation buttonList={buttonList} />
           {children}
+          <SpeedInsights />
           <Footer />
         </StrictMode>
       </body>
